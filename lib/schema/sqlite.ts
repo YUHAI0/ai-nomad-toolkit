@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core'
 
 export const categories = sqliteTable('categories', {
   id:            text('id').primaryKey(),
@@ -36,8 +36,12 @@ export const tools = sqliteTable('tools', {
   sortOrder:     integer('sort_order').default(0),
   lastVerified:  text('last_verified'),
   createdAt:     integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
-  updatedAt:     integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
-})
+  updatedAt:     integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()).$onUpdateFn(() => new Date()),
+}, (t) => [
+  index('idx_tools_category').on(t.categoryId),
+  index('idx_tools_status').on(t.status),
+  index('idx_tools_featured').on(t.featured),
+])
 
 export const adminUsers = sqliteTable('admin_users', {
   id:           text('id').primaryKey(),

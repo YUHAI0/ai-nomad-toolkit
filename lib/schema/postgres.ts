@@ -1,4 +1,4 @@
-import { pgTable, text, integer, boolean, timestamp, json } from 'drizzle-orm/pg-core'
+import { pgTable, text, integer, boolean, timestamp, json, index } from 'drizzle-orm/pg-core'
 
 export const categories = pgTable('categories', {
   id:            text('id').primaryKey(),
@@ -36,8 +36,12 @@ export const tools = pgTable('tools', {
   sortOrder:     integer('sort_order').default(0),
   lastVerified:  text('last_verified'),
   createdAt:     timestamp('created_at').defaultNow(),
-  updatedAt:     timestamp('updated_at').defaultNow(),
-})
+  updatedAt:     timestamp('updated_at').defaultNow().$onUpdateFn(() => new Date()),
+}, (t) => [
+  index('idx_tools_category').on(t.categoryId),
+  index('idx_tools_status').on(t.status),
+  index('idx_tools_featured').on(t.featured),
+])
 
 export const adminUsers = pgTable('admin_users', {
   id:           text('id').primaryKey(),

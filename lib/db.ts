@@ -2,6 +2,9 @@ import 'server-only'
 
 function createDb() {
   if (process.env.DB_DRIVER === 'postgres') {
+    if (!process.env.DATABASE_URL) {
+      throw new Error('[DB] DATABASE_URL is required when DB_DRIVER=postgres')
+    }
     const { drizzle } = require('drizzle-orm/postgres-js')
     const postgres = require('postgres')
     const schema = require('./schema/postgres')
