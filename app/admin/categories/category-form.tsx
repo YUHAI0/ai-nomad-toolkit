@@ -85,7 +85,7 @@ export function CategoryForm({ mode, category }: Props) {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <Label>是否 AI 板块</Label>
-              <Select name="isAi" defaultValue={category?.isAi !== false ? 'true' : 'false'}>
+              <Select name="isAi" defaultValue={category?.isAi === false ? 'false' : 'true'}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="true">板块 A (AI)</SelectItem>

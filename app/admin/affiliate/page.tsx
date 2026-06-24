@@ -7,6 +7,7 @@ export default function AffiliatePage() {
   const [filter, setFilter] = useState('')
   const [edits, setEdits] = useState<Record<string, { url: string; rate: string }>>({})
   const [saving, setSaving] = useState<Record<string, boolean>>({})
+  const [saveError, setSaveError] = useState<Record<string, string>>({})
 
   useEffect(() => {
     getAffiliateTools(filter).then(setTools)
@@ -24,9 +25,12 @@ export default function AffiliatePage() {
     const url = edit.url
     const rate = edit.rate
     setSaving(p => ({ ...p, [toolId]: true }))
+    setSaveError(p => ({ ...p, [toolId]: '' }))
     try {
       await updateAffiliateLink(toolId, url, rate, url !== '' || rate !== '')
       setTools(prev => prev.map(t => t.id === toolId ? { ...t, urlAffiliate: url, affiliateRate: rate, hasAffiliate: url !== '' || rate !== '' } : t))
+    } catch {
+      setSaveError(p => ({ ...p, [toolId]: '保存失败' }))
     } finally {
       setSaving(p => ({ ...p, [toolId]: false }))
     }
@@ -89,6 +93,7 @@ export default function AffiliatePage() {
                     >
                       {saving[tool.id] ? '保存中' : '保存'}
                     </button>
+                    {saveError[tool.id] && <p className="text-red-500 text-xs mt-1">{saveError[tool.id]}</p>}
                   </td>
                 </tr>
               )
