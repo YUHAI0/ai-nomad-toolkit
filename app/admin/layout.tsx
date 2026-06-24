@@ -30,8 +30,8 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             </Link>
           ))}
         </nav>
-        <form action={async () => { 'use server'; await signOut({ redirectTo: '/admin/login' }) }}>
-          <button className="w-full flex items-center gap-2 px-3 py-2 text-slate-500 hover:text-white text-sm">
+        <form aria-label="退出登录" action={async () => { 'use server'; await signOut({ redirectTo: '/admin/login' }) }}>
+          <button type="submit" className="w-full flex items-center gap-2 px-3 py-2 text-slate-500 hover:text-white text-sm">
             <span>↩</span> 退出登录
           </button>
         </form>

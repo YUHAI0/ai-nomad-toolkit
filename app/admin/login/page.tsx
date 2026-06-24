@@ -26,7 +26,7 @@ export default function LoginPage() {
     if (res?.error) {
       setError('邮箱或密码错误')
     } else {
-      router.push('/admin/tools')
+      router.replace('/admin/tools')
     }
   }
 
