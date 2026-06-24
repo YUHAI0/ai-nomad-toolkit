@@ -17,6 +17,7 @@ interface Props {
 export function ToolForm({ categories, tool, mode }: Props) {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -36,6 +37,8 @@ export function ToolForm({ categories, tool, mode }: Props) {
         await updateTool(tool!.id, data)
       }
       setOpen(false)
+    } catch (err) {
+      setError('保存失败，请重试')
     } finally {
       setLoading(false)
     }
@@ -164,6 +167,7 @@ export function ToolForm({ categories, tool, mode }: Props) {
             <Label>Logo URL</Label>
             <Input name="logoUrl" defaultValue={tool?.logoUrl} placeholder="/logos/cursor.png 或 https://..." />
           </div>
+          {error && <p className="text-red-500 text-sm">{error}</p>}
           <div className="flex gap-3 pt-2">
             <Button type="submit" className="bg-green-600 hover:bg-green-700 flex-1" disabled={loading}>
               {loading ? '保存中...' : '保存'}

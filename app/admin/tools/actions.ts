@@ -3,6 +3,7 @@ import { db } from '@/lib/db'
 import { nanoid } from 'nanoid'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
+import { auth } from '@/lib/auth'
 
 function getSchema() {
   return process.env.DB_DRIVER === 'postgres'
@@ -11,6 +12,8 @@ function getSchema() {
 }
 
 export async function createTool(data: Record<string, unknown>) {
+  const session = await auth()
+  if (!session) throw new Error('Unauthorized')
   const schema = getSchema()
   const id = (data.id as string) || nanoid(10).toLowerCase().replace(/[^a-z0-9-]/g, '-')
   await (db as any).insert(schema.tools).values({
@@ -24,6 +27,8 @@ export async function createTool(data: Record<string, unknown>) {
 }
 
 export async function updateTool(id: string, data: Record<string, unknown>) {
+  const session = await auth()
+  if (!session) throw new Error('Unauthorized')
   const schema = getSchema()
   await (db as any).update(schema.tools)
     .set({ ...data, updatedAt: new Date() })
@@ -40,12 +45,16 @@ export async function updateTool(id: string, data: Record<string, unknown>) {
 }
 
 export async function deleteTool(id: string) {
+  const session = await auth()
+  if (!session) throw new Error('Unauthorized')
   const schema = getSchema()
   await (db as any).delete(schema.tools).where(eq(schema.tools.id, id))
   revalidatePath('/admin/tools')
 }
 
 export async function publishTool(id: string, status: 'published' | 'draft') {
+  const session = await auth()
+  if (!session) throw new Error('Unauthorized')
   const schema = getSchema()
   await (db as any).update(schema.tools)
     .set({ status, updatedAt: new Date() })
