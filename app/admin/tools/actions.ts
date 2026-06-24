@@ -29,7 +29,7 @@ export async function updateTool(id: string, data: Record<string, unknown>) {
     .set({ ...data, updatedAt: new Date() })
     .where(eq(schema.tools.id, id))
   revalidatePath('/admin/tools')
-  await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/revalidate`, {
+  fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/revalidate`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export async function publishTool(id: string, status: 'published' | 'draft') {
     .set({ status, updatedAt: new Date() })
     .where(eq(schema.tools.id, id))
   revalidatePath('/admin/tools')
-  await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/revalidate`, {
+  fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/revalidate`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
