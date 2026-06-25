@@ -14,9 +14,8 @@ export const authConfig: NextAuthConfig = {
       if (token) session.user.id = token.id as string
       return session
     },
-    authorized({ auth }) {
-      return !!auth?.user
-    },
+    // 不使用 authorized 回调，路由保护由 middleware.ts 手动处理
   },
   providers: [],
+  trustHost: true,
 }
