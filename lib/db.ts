@@ -12,7 +12,12 @@ function createDb() {
     const { drizzle } = require('drizzle-orm/postgres-js')
     const postgres = require('postgres')
     const schema = require('./schema/postgres')
-    const client = postgres(process.env.DATABASE_URL!, { prepare: false })
+    const client = postgres(process.env.DATABASE_URL!, {
+      prepare: false,
+      max: 1,
+      idle_timeout: 20,
+      connect_timeout: 10,
+    })
     return drizzle(client, { schema })
   } else {
     const { drizzle } = require('drizzle-orm/better-sqlite3')
@@ -26,4 +31,4 @@ function createDb() {
 // 单例：模块级缓存，避免开发热重载时重复建连
 const globalForDb = global as unknown as { db: ReturnType<typeof createDb> }
 export const db = globalForDb.db ?? createDb()
-if (process.env.NODE_ENV !== 'production') globalForDb.db = db
+globalForDb.db = db

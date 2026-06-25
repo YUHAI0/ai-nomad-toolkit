@@ -1,19 +1,4 @@
 export async function register() {
-  if (process.env.NEXT_RUNTIME !== 'nodejs') return
-
-  try {
-    if (process.env.DATABASE_URL) {
-      const { migrate } = await import('drizzle-orm/postgres-js/migrator')
-      const { db } = await import('./lib/db')
-      await migrate(db as any, { migrationsFolder: './drizzle/pg' })
-    } else {
-      const { migrate } = await import('drizzle-orm/better-sqlite3/migrator')
-      const { db } = await import('./lib/db')
-      await migrate(db as any, { migrationsFolder: './drizzle/sqlite' })
-    }
-    console.log('[DB] Migrations applied successfully')
-  } catch (err) {
-    console.error('[DB] Migration failed:', err)
-    // 不抛错，避免阻塞应用启动
-  }
+  // Database initialization runs during `prebuild` so page rendering does not
+  // compete with migrations on Vercel serverless cold starts.
 }
