@@ -1,6 +1,26 @@
 import NextAuth from 'next-auth'
-import { authConfig } from '@/lib/auth.config'
 import { NextResponse } from 'next/server'
+import type { NextAuthConfig } from 'next-auth'
+
+const authConfig: NextAuthConfig = {
+  pages: {
+    signIn: '/admin/login',
+    error: '/admin/login',
+  },
+  session: { strategy: 'jwt', maxAge: 8 * 60 * 60 },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) token.id = user.id
+      return token
+    },
+    async session({ session, token }) {
+      if (token) session.user.id = token.id as string
+      return session
+    },
+  },
+  providers: [],
+  trustHost: true,
+}
 
 const { auth } = NextAuth(authConfig)
 
@@ -16,7 +36,6 @@ export default auth((req) => {
     return NextResponse.redirect(new URL('/admin/tools', req.url))
   }
 
-  // 将当前路径注入请求头，供 layout 读取以避免重定向循环
   const requestHeaders = new Headers(req.headers)
   requestHeaders.set('x-pathname', req.nextUrl.pathname)
   return NextResponse.next({ request: { headers: requestHeaders } })
