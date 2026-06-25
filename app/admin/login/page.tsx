@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -18,13 +17,12 @@ export default function LoginPage() {
     setLoading(true)
     setError('')
     const res = await signIn('credentials', {
-      email,
       password,
       redirect: false,
     })
     setLoading(false)
     if (res?.error) {
-      setError('邮箱或密码错误')
+      setError('密码错误')
     } else {
       router.replace('/admin/tools')
     }
@@ -39,24 +37,15 @@ export default function LoginPage() {
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="email">邮箱</Label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              placeholder="admin@example.com"
-              required
-            />
-          </div>
-          <div>
-            <Label htmlFor="password">密码</Label>
+            <Label htmlFor="password">管理员密码</Label>
             <Input
               id="password"
               type="password"
               value={password}
               onChange={e => setPassword(e.target.value)}
+              placeholder="请输入密码"
               required
+              autoFocus
             />
           </div>
           {error && <p className="text-red-500 text-sm">{error}</p>}
