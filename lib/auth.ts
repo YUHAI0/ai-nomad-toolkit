@@ -13,7 +13,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const adminPassword = process.env.ADMIN_PASSWORD
         if (!adminPassword) return null
         if (credentials?.password !== adminPassword) return null
-        return { id: 'admin', name: 'Admin' }
+        return { id: 'admin', name: 'Admin', email: 'admin@localhost' }
       },
     }),
   ],
