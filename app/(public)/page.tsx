@@ -7,7 +7,7 @@ import { FeaturedTools } from '@/components/featured-tools'
 export const revalidate = 3600
 
 function getSchema() {
-  return process.env.DB_DRIVER === 'postgres'
+  return process.env.DATABASE_URL
     ? require('@/lib/schema/postgres')
     : require('@/lib/schema/sqlite')
 }

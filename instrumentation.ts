@@ -2,7 +2,8 @@ export async function register() {
   if (process.env.NEXT_RUNTIME !== 'nodejs') return
 
   try {
-    if (process.env.DB_DRIVER === 'postgres') {
+    const { isPostgres } = await import('./lib/env')
+    if (isPostgres()) {
       const { migrate } = await import('drizzle-orm/postgres-js/migrator')
       const { db } = await import('./lib/db')
       await migrate(db as any, { migrationsFolder: './drizzle/pg' })

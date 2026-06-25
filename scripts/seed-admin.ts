@@ -2,8 +2,12 @@ import bcrypt from 'bcryptjs'
 import { nanoid } from 'nanoid'
 import { eq } from 'drizzle-orm'
 
+function isPostgres() {
+  return Boolean(process.env.DATABASE_URL)
+}
+
 function createDb() {
-  if (process.env.DB_DRIVER === 'postgres') {
+  if (isPostgres()) {
     const { drizzle } = require('drizzle-orm/postgres-js')
     const postgres = require('postgres')
     const client = postgres(process.env.DATABASE_URL!, { prepare: false })
@@ -21,7 +25,7 @@ async function seedAdmin() {
   const email = process.env.ADMIN_EMAIL ?? 'admin@example.com'
   const password = process.env.ADMIN_PASSWORD ?? 'changeme123'
 
-  const schema = process.env.DB_DRIVER === 'postgres'
+  const schema = isPostgres()
     ? require('../lib/schema/postgres')
     : require('../lib/schema/sqlite')
 

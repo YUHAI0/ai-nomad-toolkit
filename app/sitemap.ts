@@ -1,15 +1,16 @@
 import { MetadataRoute } from 'next'
 import { db } from '@/lib/db'
 import { eq } from 'drizzle-orm'
+import { getSiteUrl } from '@/lib/env'
 
 function getSchema() {
-  return process.env.DB_DRIVER === 'postgres'
+  return process.env.DATABASE_URL
     ? require('@/lib/schema/postgres')
     : require('@/lib/schema/sqlite')
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourdomain.com'
+  const base = getSiteUrl()
   const schema = getSchema()
 
   const [tools, categories] = await Promise.all([

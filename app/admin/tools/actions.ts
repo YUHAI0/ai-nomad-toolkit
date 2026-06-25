@@ -6,7 +6,7 @@ import { revalidatePath } from 'next/cache'
 import { auth } from '@/lib/auth'
 
 function getSchema() {
-  return process.env.DB_DRIVER === 'postgres'
+  return process.env.DATABASE_URL
     ? require('@/lib/schema/postgres')
     : require('@/lib/schema/sqlite')
 }
@@ -34,14 +34,8 @@ export async function updateTool(id: string, data: Record<string, unknown>) {
     .set({ ...data, updatedAt: new Date() })
     .where(eq(schema.tools.id, id))
   revalidatePath('/admin/tools')
-  fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/revalidate`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-revalidate-secret': process.env.REVALIDATE_SECRET!,
-    },
-    body: JSON.stringify({ path: `/tool/${id}` }),
-  }).catch(() => {})
+  revalidatePath(`/tool/${id}`)
+  revalidatePath(`/site/${id}`)
 }
 
 export async function deleteTool(id: string) {
@@ -60,14 +54,8 @@ export async function publishTool(id: string, status: 'published' | 'draft') {
     .set({ status, updatedAt: new Date() })
     .where(eq(schema.tools.id, id))
   revalidatePath('/admin/tools')
-  fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/revalidate`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-revalidate-secret': process.env.REVALIDATE_SECRET!,
-    },
-    body: JSON.stringify({ path: `/tool/${id}` }),
-  }).catch(() => {})
+  revalidatePath(`/tool/${id}`)
+  revalidatePath(`/site/${id}`)
 }
 
 export async function getTools(search?: string, categoryId?: string, status?: string) {

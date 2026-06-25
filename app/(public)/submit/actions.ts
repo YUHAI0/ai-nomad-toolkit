@@ -3,7 +3,7 @@ import { db } from '@/lib/db'
 import { nanoid } from 'nanoid'
 
 function getSchema() {
-  return process.env.DB_DRIVER === 'postgres'
+  return process.env.DATABASE_URL
     ? require('@/lib/schema/postgres')
     : require('@/lib/schema/sqlite')
 }

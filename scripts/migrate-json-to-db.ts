@@ -5,15 +5,19 @@ import { nanoid } from 'nanoid'
 import fs from 'fs'
 import path from 'path'
 
+function isPostgres() {
+  return Boolean(process.env.DATABASE_URL)
+}
+
 function getSchema() {
-  return process.env.DB_DRIVER === 'postgres'
+  return isPostgres()
     ? require('../lib/schema/postgres')
     : require('../lib/schema/sqlite')
 }
 
 // 独立创建数据库连接，避免引入带 server-only 的 lib/db（脚本通过 tsx 直接运行）
 function createDb() {
-  if (process.env.DB_DRIVER === 'postgres') {
+  if (isPostgres()) {
     const { drizzle } = require('drizzle-orm/postgres-js')
     const postgres = require('postgres')
     const client = postgres(process.env.DATABASE_URL!, { prepare: false })

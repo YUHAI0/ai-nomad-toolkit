@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache'
 import { auth } from '@/lib/auth'
 
 function getSchema() {
-  return process.env.DB_DRIVER === 'postgres'
+  return process.env.DATABASE_URL
     ? require('@/lib/schema/postgres')
     : require('@/lib/schema/sqlite')
 }

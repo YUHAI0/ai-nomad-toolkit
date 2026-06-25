@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from '@/components/analytics'
 import { AdSenseScript } from '@/components/adsense'
 import { TawkTo } from '@/components/tawkto'
+import { getSiteUrl } from '@/lib/env'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | AI Nomad Toolkit',
   },
   description: '精选 AI 工具与变现平台，数字游民、Etsy 卖家、独立开发者一站式资源库',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourdomain.com'),
+  metadataBase: new URL(getSiteUrl()),
   openGraph: {
     siteName: 'AI Nomad Toolkit',
     locale: 'zh_CN',
