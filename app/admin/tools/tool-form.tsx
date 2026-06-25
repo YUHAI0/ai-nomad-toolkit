@@ -45,7 +45,7 @@ export function ToolForm({ categories, tool, mode }: Props) {
   }
 
   return (
-    <Drawer open={open} onOpenChange={setOpen} direction="right">
+    <Drawer open={open} onOpenChange={setOpen} direction="right" modal={false}>
       <DrawerTrigger asChild>
         {mode === 'create'
           ? <Button className="bg-green-600 hover:bg-green-700">+ 新建工具</Button>
