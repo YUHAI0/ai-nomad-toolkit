@@ -7,9 +7,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  const { path, tag } = await req.json()
+  const { path, tag } = await req.json() as { path?: string; tag?: string }
 
-  if (tag) revalidateTag(tag)
+  if (tag) revalidateTag(tag, 'default')
   if (path) revalidatePath(path)
 
   revalidatePath('/')
