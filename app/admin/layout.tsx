@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { auth, signOut } from '@/lib/auth'
 import { redirect } from 'next/navigation'
+import { headers } from 'next/headers'
 
 const navItems = [
   { href: '/admin/tools',      icon: '⚡', label: '工具管理' },
@@ -10,6 +11,13 @@ const navItems = [
 ]
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers()
+  const pathname = headersList.get('x-pathname') ?? ''
+  const isLoginPage = pathname === '/admin/login'
+
+  // 登录页直接渲染，不检查 session 避免重定向循环
+  if (isLoginPage) return <>{children}</>
+
   const session = await auth()
   if (!session) redirect('/admin/login')
 

@@ -15,6 +15,11 @@ export default auth((req) => {
   if (isLoginPage && req.auth) {
     return NextResponse.redirect(new URL('/admin/tools', req.url))
   }
+
+  // 将当前路径注入请求头，供 layout 读取以避免重定向循环
+  const requestHeaders = new Headers(req.headers)
+  requestHeaders.set('x-pathname', req.nextUrl.pathname)
+  return NextResponse.next({ request: { headers: requestHeaders } })
 })
 
 export const config = {
