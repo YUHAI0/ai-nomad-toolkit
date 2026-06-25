@@ -1,5 +1,8 @@
 import 'server-only'
-import { isPostgres } from './env'
+
+function isPostgres() {
+  return Boolean(process.env.DATABASE_URL)
+}
 
 function createDb() {
   if (isPostgres()) {

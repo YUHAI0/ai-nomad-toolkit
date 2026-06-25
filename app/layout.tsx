@@ -4,7 +4,16 @@ import "./globals.css";
 import { Analytics } from '@/components/analytics'
 import { AdSenseScript } from '@/components/adsense'
 import { TawkTo } from '@/components/tawkto'
-import { getSiteUrl } from '@/lib/env'
+
+function getSiteUrl() {
+  const url =
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ??
+    process.env.VERCEL_URL ??
+    'https://yourdomain.com'
+
+  return url.startsWith('http') ? url : `https://${url}`
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
