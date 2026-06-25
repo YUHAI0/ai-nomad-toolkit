@@ -5,8 +5,9 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { createTool, updateTool } from './actions'
+
+const selectClass = 'w-full border border-slate-200 rounded-lg px-3 py-2 text-sm bg-white'
 
 interface Props {
   categories: Array<{ id: string; name: string; emoji: string | null }>
@@ -45,7 +46,7 @@ export function ToolForm({ categories, tool, mode }: Props) {
   }
 
   return (
-    <Drawer open={open} onOpenChange={setOpen} direction="right" modal={false}>
+    <Drawer open={open} onOpenChange={setOpen} direction="right" modal={false} handleOnly>
       <DrawerTrigger asChild>
         {mode === 'create'
           ? <Button className="bg-green-600 hover:bg-green-700">+ 新建工具</Button>
@@ -78,13 +79,10 @@ export function ToolForm({ categories, tool, mode }: Props) {
           <div className="grid grid-cols-3 gap-3">
             <div>
               <Label>有 Affiliate</Label>
-              <Select name="hasAffiliate" defaultValue={tool?.hasAffiliate ? 'true' : 'false'}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="true">是</SelectItem>
-                  <SelectItem value="false">否</SelectItem>
-                </SelectContent>
-              </Select>
+              <select name="hasAffiliate" defaultValue={tool?.hasAffiliate ? 'true' : 'false'} className={selectClass}>
+                <option value="true">是</option>
+                <option value="false">否</option>
+              </select>
             </div>
             <div>
               <Label>佣金说明</Label>
@@ -92,25 +90,21 @@ export function ToolForm({ categories, tool, mode }: Props) {
             </div>
             <div>
               <Label>栏目</Label>
-              <Select name="categoryId" defaultValue={tool?.categoryId}>
-                <SelectTrigger><SelectValue placeholder="选择栏目" /></SelectTrigger>
-                <SelectContent>
-                  {categories.map(c => <SelectItem key={c.id} value={c.id}>{c.emoji} {c.name}</SelectItem>)}
-                </SelectContent>
-              </Select>
+              <select name="categoryId" defaultValue={tool?.categoryId ?? ''} className={selectClass}>
+                <option value="">选择栏目</option>
+                {categories.map(c => <option key={c.id} value={c.id}>{c.emoji} {c.name}</option>)}
+              </select>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>
               <Label>定价类型</Label>
-              <Select name="pricingType" defaultValue={tool?.pricingType}>
-                <SelectTrigger><SelectValue placeholder="选择" /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="free">免费</SelectItem>
-                  <SelectItem value="freemium">Freemium</SelectItem>
-                  <SelectItem value="paid">付费</SelectItem>
-                </SelectContent>
-              </Select>
+              <select name="pricingType" defaultValue={tool?.pricingType ?? ''} className={selectClass}>
+                <option value="">选择</option>
+                <option value="free">免费</option>
+                <option value="freemium">Freemium</option>
+                <option value="paid">付费</option>
+              </select>
             </div>
             <div>
               <Label>定价说明</Label>
@@ -132,35 +126,26 @@ export function ToolForm({ categories, tool, mode }: Props) {
           <div className="grid grid-cols-3 gap-3">
             <div>
               <Label>是否 AI 工具</Label>
-              <Select name="isAi" defaultValue={tool?.isAi !== false ? 'true' : 'false'}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="true">AI 工具</SelectItem>
-                  <SelectItem value="false">非 AI</SelectItem>
-                </SelectContent>
-              </Select>
+              <select name="isAi" defaultValue={tool?.isAi !== false ? 'true' : 'false'} className={selectClass}>
+                <option value="true">AI 工具</option>
+                <option value="false">非 AI</option>
+              </select>
             </div>
             <div>
               <Label>地区</Label>
-              <Select name="region" defaultValue={tool?.region ?? 'global'}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="global">全球</SelectItem>
-                  <SelectItem value="cn">中国</SelectItem>
-                  <SelectItem value="us-ca">美加</SelectItem>
-                  <SelectItem value="asia">亚洲</SelectItem>
-                </SelectContent>
-              </Select>
+              <select name="region" defaultValue={tool?.region ?? 'global'} className={selectClass}>
+                <option value="global">全球</option>
+                <option value="cn">中国</option>
+                <option value="us-ca">美加</option>
+                <option value="asia">亚洲</option>
+              </select>
             </div>
             <div>
               <Label>精选工具</Label>
-              <Select name="featured" defaultValue={tool?.featured ? 'true' : 'false'}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="true">是</SelectItem>
-                  <SelectItem value="false">否</SelectItem>
-                </SelectContent>
-              </Select>
+              <select name="featured" defaultValue={tool?.featured ? 'true' : 'false'} className={selectClass}>
+                <option value="true">是</option>
+                <option value="false">否</option>
+              </select>
             </div>
           </div>
           <div>

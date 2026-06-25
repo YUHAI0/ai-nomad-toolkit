@@ -1,7 +1,21 @@
-import { db } from '../lib/db'
 import bcrypt from 'bcryptjs'
 import { nanoid } from 'nanoid'
 import { eq } from 'drizzle-orm'
+
+function createDb() {
+  if (process.env.DB_DRIVER === 'postgres') {
+    const { drizzle } = require('drizzle-orm/postgres-js')
+    const postgres = require('postgres')
+    const client = postgres(process.env.DATABASE_URL!, { prepare: false })
+    return drizzle(client, { schema: require('../lib/schema/postgres') })
+  }
+  const { drizzle } = require('drizzle-orm/better-sqlite3')
+  const Database = require('better-sqlite3')
+  const client = new Database('./local.db')
+  return drizzle(client, { schema: require('../lib/schema/sqlite') })
+}
+
+const db = createDb()
 
 async function seedAdmin() {
   const email = process.env.ADMIN_EMAIL ?? 'admin@example.com'

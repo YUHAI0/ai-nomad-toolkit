@@ -1,7 +1,6 @@
 // 使用方式：把 tools.json 和 categories.json 放到 data/ 目录后运行
 // npx tsx scripts/migrate-json-to-db.ts
 
-import { db } from '../lib/db'
 import { nanoid } from 'nanoid'
 import fs from 'fs'
 import path from 'path'
@@ -11,6 +10,22 @@ function getSchema() {
     ? require('../lib/schema/postgres')
     : require('../lib/schema/sqlite')
 }
+
+// 独立创建数据库连接，避免引入带 server-only 的 lib/db（脚本通过 tsx 直接运行）
+function createDb() {
+  if (process.env.DB_DRIVER === 'postgres') {
+    const { drizzle } = require('drizzle-orm/postgres-js')
+    const postgres = require('postgres')
+    const client = postgres(process.env.DATABASE_URL!, { prepare: false })
+    return drizzle(client, { schema: require('../lib/schema/postgres') })
+  }
+  const { drizzle } = require('drizzle-orm/better-sqlite3')
+  const Database = require('better-sqlite3')
+  const client = new Database('./local.db')
+  return drizzle(client, { schema: require('../lib/schema/sqlite') })
+}
+
+const db = createDb()
 
 async function run() {
   const schema = getSchema()

@@ -4,8 +4,9 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { createCategory, updateCategory } from './actions'
+
+const selectClass = 'w-full border border-slate-200 rounded-lg px-3 py-2 text-sm bg-white'
 
 interface Props {
   mode: 'create' | 'edit'
@@ -42,7 +43,7 @@ export function CategoryForm({ mode, category }: Props) {
   }
 
   return (
-    <Drawer open={open} onOpenChange={setOpen} direction="right" modal={false}>
+    <Drawer open={open} onOpenChange={setOpen} direction="right" modal={false} handleOnly>
       <DrawerTrigger asChild>
         {mode === 'create'
           ? <Button className="bg-green-600 hover:bg-green-700">+ 新建栏目</Button>
@@ -85,13 +86,10 @@ export function CategoryForm({ mode, category }: Props) {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <Label>是否 AI 板块</Label>
-              <Select name="isAi" defaultValue={category?.isAi === false ? 'false' : 'true'}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="true">板块 A (AI)</SelectItem>
-                  <SelectItem value="false">板块 B (非AI)</SelectItem>
-                </SelectContent>
-              </Select>
+              <select name="isAi" defaultValue={category?.isAi === false ? 'false' : 'true'} className={selectClass}>
+                <option value="true">板块 A (AI)</option>
+                <option value="false">板块 B (非AI)</option>
+              </select>
             </div>
             <div>
               <Label>排序权重</Label>

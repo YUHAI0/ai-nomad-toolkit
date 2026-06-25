@@ -1,0 +1,42 @@
+[
+  {
+    "id": "etsy-tools",
+    "name": "Etsy 卖家",
+    "name_en": "Etsy Sellers",
+    "emoji": "🛍️",
+    "description": "面向 Etsy 卖家的选品、设计、Listing 优化与自动化工具",
+    "audience": "Etsy 卖家、手工艺品与数字商品创作者",
+    "is_ai_section": true,
+    "priority": 0
+  },
+  {
+    "id": "content-social",
+    "name": "内容创作者",
+    "name_en": "Content Creators",
+    "emoji": "📱",
+    "description": "自媒体与社交内容创作的 AI 写作、剪辑与运营工具",
+    "audience": "自媒体作者、短视频与社媒创作者",
+    "is_ai_section": true,
+    "priority": 1
+  },
+  {
+    "id": "dev-tools",
+    "name": "独立开发者",
+    "name_en": "Indie Developers",
+    "emoji": "💻",
+    "description": "面向独立开发者的 AI 编程、建站与产品工具",
+    "audience": "独立开发者、Indie Hacker",
+    "is_ai_section": true,
+    "priority": 2
+  },
+  {
+    "id": "nomad-life",
+    "name": "数字游民",
+    "name_en": "Nomad Life",
+    "emoji": "🌍",
+    "description": "远程办公、协作与数字游民生活方式相关工具",
+    "audience": "数字游民、远程工作者",
+    "is_ai_section": false,
+    "priority": 3
+  }
+]
