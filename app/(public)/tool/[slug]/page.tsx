@@ -16,11 +16,15 @@ function getSchema() {
 }
 
 export async function generateStaticParams() {
-  const schema = getSchema()
-  const tools = await (db as any).select({ id: schema.tools.id })
-    .from(schema.tools)
-    .where(and(eq(schema.tools.status, 'published'), eq(schema.tools.isAi, true)))
-  return tools.map((r: any) => ({ slug: r.id }))
+  try {
+    const schema = getSchema()
+    const tools = await (db as any).select({ id: schema.tools.id })
+      .from(schema.tools)
+      .where(and(eq(schema.tools.status, 'published'), eq(schema.tools.isAi, true)))
+    return tools.map((r: any) => ({ slug: r.id }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

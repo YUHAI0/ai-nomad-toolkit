@@ -13,9 +13,13 @@ function getSchema() {
 }
 
 export async function generateStaticParams() {
-  const schema = getSchema()
-  const cats = await (db as any).select({ id: schema.categories.id }).from(schema.categories)
-  return cats.map((c: any) => ({ slug: c.id }))
+  try {
+    const schema = getSchema()
+    const cats = await (db as any).select({ id: schema.categories.id }).from(schema.categories)
+    return cats.map((c: any) => ({ slug: c.id }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

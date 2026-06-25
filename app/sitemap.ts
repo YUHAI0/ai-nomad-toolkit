@@ -14,8 +14,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const [tools, categories] = await Promise.all([
     (db as any).select({ id: schema.tools.id, isAi: schema.tools.isAi, updatedAt: schema.tools.updatedAt })
-      .from(schema.tools).where(eq(schema.tools.status, 'published')),
-    (db as any).select({ id: schema.categories.id }).from(schema.categories),
+      .from(schema.tools).where(eq(schema.tools.status, 'published')).catch(() => []),
+    (db as any).select({ id: schema.categories.id }).from(schema.categories).catch(() => []),
   ])
 
   const toolUrls = tools.map((t: any) => ({
