@@ -4,6 +4,7 @@ import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = { title: '搜索工具 | AI Nomad Toolkit' }
+export const dynamic = 'force-dynamic'
 
 function getSchema() {
   return process.env.DATABASE_URL

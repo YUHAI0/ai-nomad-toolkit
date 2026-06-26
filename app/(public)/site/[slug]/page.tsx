@@ -8,6 +8,7 @@ import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600
+export const dynamicParams = true
 
 function getSchema() {
   return process.env.DATABASE_URL
@@ -16,15 +17,7 @@ function getSchema() {
 }
 
 export async function generateStaticParams() {
-  try {
-    const schema = getSchema()
-    const tools = await (db as any).select({ id: schema.tools.id })
-      .from(schema.tools)
-      .where(and(eq(schema.tools.status, 'published'), eq(schema.tools.isAi, false)))
-    return tools.map((r: any) => ({ slug: r.id }))
-  } catch {
-    return []
-  }
+  return []
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

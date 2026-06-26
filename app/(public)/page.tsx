@@ -5,6 +5,7 @@ import { CategoryGrid } from '@/components/category-grid'
 import { FeaturedTools } from '@/components/featured-tools'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 function getSchema() {
   return process.env.DATABASE_URL
