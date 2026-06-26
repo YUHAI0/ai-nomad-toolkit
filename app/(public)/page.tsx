@@ -11,6 +11,20 @@ export const dynamic = 'force-dynamic'
 
 const HOME_DB_TIMEOUT_MS = 3000
 
+type DefaultTool = {
+  id: string
+  name: string
+  one_liner?: string | null
+  logo_url?: string | null
+  category?: string | null
+  has_affiliate?: boolean | null
+  url_affiliate?: string | null
+  url_official: string
+  pricing_type?: string | null
+  is_ai?: boolean | null
+  featured?: boolean | null
+}
+
 function getSchema() {
   return process.env.DATABASE_URL
     ? require('@/lib/schema/postgres')
@@ -26,7 +40,7 @@ function toDefaultCategory(cat: (typeof defaultCategories)[number]) {
   }
 }
 
-function toDefaultTool(tool: (typeof defaultTools)[number]) {
+function toDefaultTool(tool: DefaultTool) {
   return {
     id: tool.id,
     name: tool.name,
@@ -47,8 +61,9 @@ function getDefaultHomeData() {
     .sort((a, b) => (a.priority ?? 0) - (b.priority ?? 0))
     .map(toDefaultCategory)
 
-  const allPublished = defaultTools.map(toDefaultTool)
-  const featuredTools = defaultTools
+  const tools = defaultTools as DefaultTool[]
+  const allPublished = tools.map(toDefaultTool)
+  const featuredTools = tools
     .filter(tool => tool.featured)
     .slice(0, 6)
     .map(toDefaultTool)
