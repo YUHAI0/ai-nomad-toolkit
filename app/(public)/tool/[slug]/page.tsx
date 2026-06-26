@@ -6,6 +6,12 @@ import Link from 'next/link'
 import { AffiliateDisclosure } from '@/components/affiliate-disclosure'
 import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
+import {
+  getFallbackCategory,
+  getFallbackRelatedTools,
+  getFallbackTool,
+  withDbTimeout,
+} from '@/lib/public-data'
 
 export const revalidate = 3600
 export const dynamic = 'force-dynamic'
@@ -24,7 +30,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const schema = getSchema()
-  const tools = await (db as any).select().from(schema.tools).where(eq(schema.tools.id, slug))
+  const fallbackTool = getFallbackTool(slug)
+  const tools = await withDbTimeout(
+    (db as any).select().from(schema.tools).where(eq(schema.tools.id, slug)),
+    fallbackTool ? [fallbackTool] : [],
+    `tool metadata ${slug}`,
+  )
   const tool = tools[0]
   if (!tool) return {}
   return {
@@ -38,18 +49,31 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
   const { slug } = await params
   const schema = getSchema()
 
-  const tools = await (db as any).select().from(schema.tools).where(eq(schema.tools.id, slug))
+  const fallbackTool = getFallbackTool(slug)
+  const tools = await withDbTimeout(
+    (db as any).select().from(schema.tools).where(eq(schema.tools.id, slug)),
+    fallbackTool ? [fallbackTool] : [],
+    `tool ${slug}`,
+  )
   const tool = tools[0]
   if (!tool || tool.status !== 'published') notFound()
 
   const [categoryArr, related] = await Promise.all([
     tool.categoryId
-      ? (db as any).select().from(schema.categories).where(eq(schema.categories.id, tool.categoryId))
+      ? withDbTimeout(
+          (db as any).select().from(schema.categories).where(eq(schema.categories.id, tool.categoryId)),
+          getFallbackCategory(tool.categoryId) ? [getFallbackCategory(tool.categoryId)] : [],
+          `tool category ${tool.categoryId}`,
+        )
       : Promise.resolve([]),
     tool.categoryId
-      ? (db as any).select().from(schema.tools)
-          .where(and(eq(schema.tools.categoryId, tool.categoryId), eq(schema.tools.status, 'published'), ne(schema.tools.id, tool.id)))
-          .limit(4)
+      ? withDbTimeout(
+          (db as any).select().from(schema.tools)
+            .where(and(eq(schema.tools.categoryId, tool.categoryId), eq(schema.tools.status, 'published'), ne(schema.tools.id, tool.id)))
+            .limit(4),
+          getFallbackRelatedTools(tool),
+          `tool related ${tool.id}`,
+        )
       : Promise.resolve([]),
   ])
 

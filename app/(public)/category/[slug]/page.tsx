@@ -3,6 +3,11 @@ import { db } from '@/lib/db'
 import { eq, and } from 'drizzle-orm'
 import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
+import {
+  getFallbackCategory,
+  getFallbackToolsByCategory,
+  withDbTimeout,
+} from '@/lib/public-data'
 
 export const revalidate = 3600
 export const dynamic = 'force-dynamic'
@@ -21,7 +26,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const schema = getSchema()
-  const cats = await (db as any).select().from(schema.categories).where(eq(schema.categories.id, slug))
+  const fallbackCat = getFallbackCategory(slug)
+  const cats = await withDbTimeout(
+    (db as any).select().from(schema.categories).where(eq(schema.categories.id, slug)),
+    fallbackCat ? [fallbackCat] : [],
+    `category metadata ${slug}`,
+  )
   const cat = cats[0]
   if (!cat) return {}
   return {
@@ -41,13 +51,22 @@ export default async function CategoryPage({
   const { filter } = await searchParams
   const schema = getSchema()
 
-  const cats = await (db as any).select().from(schema.categories).where(eq(schema.categories.id, slug))
+  const fallbackCat = getFallbackCategory(slug)
+  const cats = await withDbTimeout(
+    (db as any).select().from(schema.categories).where(eq(schema.categories.id, slug)),
+    fallbackCat ? [fallbackCat] : [],
+    `category ${slug}`,
+  )
   const cat = cats[0]
   if (!cat) notFound()
 
-  const allTools = await (db as any).select().from(schema.tools)
-    .where(and(eq(schema.tools.categoryId, slug), eq(schema.tools.status, 'published')))
-    .orderBy(schema.tools.sortOrder)
+  const allTools = await withDbTimeout(
+    (db as any).select().from(schema.tools)
+      .where(and(eq(schema.tools.categoryId, slug), eq(schema.tools.status, 'published')))
+      .orderBy(schema.tools.sortOrder),
+    getFallbackToolsByCategory(slug),
+    `category tools ${slug}`,
+  )
 
   const tools = allTools.filter((t: any) => {
     if (filter === 'affiliate') return t.hasAffiliate

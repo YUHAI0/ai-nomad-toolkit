@@ -2,6 +2,7 @@ import { db } from '@/lib/db'
 import { like, or, eq, and } from 'drizzle-orm'
 import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
+import { searchFallbackTools, withDbTimeout } from '@/lib/public-data'
 
 export const metadata: Metadata = { title: '搜索工具 | AI Nomad Toolkit' }
 export const dynamic = 'force-dynamic'
@@ -22,15 +23,19 @@ export default async function SearchPage({
   const schema = getSchema()
 
   const tools = q
-    ? await (db as any).select().from(schema.tools).where(
-        and(
-          eq(schema.tools.status, 'published'),
-          or(
-            like(schema.tools.name, `%${q}%`),
-            like(schema.tools.oneLiner, `%${q}%`),
-            like(schema.tools.description, `%${q}%`),
+    ? await withDbTimeout(
+        (db as any).select().from(schema.tools).where(
+          and(
+            eq(schema.tools.status, 'published'),
+            or(
+              like(schema.tools.name, `%${q}%`),
+              like(schema.tools.oneLiner, `%${q}%`),
+              like(schema.tools.description, `%${q}%`),
+            )
           )
-        )
+        ),
+        searchFallbackTools(q),
+        `search ${q}`,
       )
     : []
 
