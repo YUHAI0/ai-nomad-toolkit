@@ -5,6 +5,7 @@ import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 export const dynamicParams = true
 
 function getSchema() {

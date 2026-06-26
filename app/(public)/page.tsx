@@ -3,9 +3,13 @@ import { eq, and } from 'drizzle-orm'
 import { Hero } from '@/components/hero'
 import { CategoryGrid } from '@/components/category-grid'
 import { FeaturedTools } from '@/components/featured-tools'
+import defaultCategories from '@/data/categories.json'
+import defaultTools from '@/data/tools.json'
 
 export const revalidate = 3600
 export const dynamic = 'force-dynamic'
+
+const HOME_DB_TIMEOUT_MS = 3000
 
 function getSchema() {
   return process.env.DATABASE_URL
@@ -13,7 +17,46 @@ function getSchema() {
     : require('@/lib/schema/sqlite')
 }
 
-export default async function HomePage() {
+function toDefaultCategory(cat: (typeof defaultCategories)[number]) {
+  return {
+    id: cat.id,
+    name: cat.name,
+    emoji: cat.emoji ?? null,
+    priority: cat.priority ?? 0,
+  }
+}
+
+function toDefaultTool(tool: (typeof defaultTools)[number]) {
+  return {
+    id: tool.id,
+    name: tool.name,
+    oneLiner: tool.one_liner ?? null,
+    logoUrl: tool.logo_url ?? null,
+    categoryId: tool.category ?? null,
+    hasAffiliate: tool.has_affiliate ?? false,
+    urlAffiliate: tool.url_affiliate ?? null,
+    urlOfficial: tool.url_official,
+    pricingType: tool.pricing_type ?? null,
+    isAi: tool.is_ai ?? true,
+  }
+}
+
+function getDefaultHomeData() {
+  const categories = defaultCategories
+    .slice()
+    .sort((a, b) => (a.priority ?? 0) - (b.priority ?? 0))
+    .map(toDefaultCategory)
+
+  const allPublished = defaultTools.map(toDefaultTool)
+  const featuredTools = defaultTools
+    .filter(tool => tool.featured)
+    .slice(0, 6)
+    .map(toDefaultTool)
+
+  return { categories, featuredTools, allPublished }
+}
+
+async function getDatabaseHomeData() {
   const schema = getSchema()
 
   const [categories, featuredTools, allPublished] = await Promise.all([
@@ -25,6 +68,30 @@ export default async function HomePage() {
       .from(schema.tools)
       .where(eq(schema.tools.status, 'published')),
   ])
+
+  return { categories, featuredTools, allPublished }
+}
+
+async function getHomeData() {
+  let timeout: ReturnType<typeof setTimeout> | undefined
+
+  try {
+    return await Promise.race([
+      getDatabaseHomeData(),
+      new Promise<ReturnType<typeof getDefaultHomeData>>((resolve) => {
+        timeout = setTimeout(() => resolve(getDefaultHomeData()), HOME_DB_TIMEOUT_MS)
+      }),
+    ])
+  } catch (err) {
+    console.error('[Home] Failed to load database home data:', err)
+    return getDefaultHomeData()
+  } finally {
+    if (timeout) clearTimeout(timeout)
+  }
+}
+
+export default async function HomePage() {
+  const { categories, featuredTools, allPublished } = await getHomeData()
 
   const countMap: Record<string, number> = {}
   for (const t of allPublished) {
