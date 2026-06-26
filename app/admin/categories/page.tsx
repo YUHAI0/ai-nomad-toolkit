@@ -1,6 +1,8 @@
 import { getCategories } from './actions'
 import { CategoryForm } from './category-form'
 
+export const dynamic = 'force-dynamic'
+
 export default async function CategoriesPage() {
   const categories = await getCategories()
 

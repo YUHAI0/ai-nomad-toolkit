@@ -3,6 +3,8 @@ import { auth, signOut } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 
+export const dynamic = 'force-dynamic'
+
 const navItems = [
   { href: '/admin/tools',      icon: '⚡', label: '工具管理' },
   { href: '/admin/categories', icon: '📂', label: '栏目管理' },

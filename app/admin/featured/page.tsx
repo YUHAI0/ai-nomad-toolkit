@@ -1,5 +1,7 @@
 import { getFeaturedTools, getAllPublishedTools, toggleFeatured } from './actions'
 
+export const dynamic = 'force-dynamic'
+
 export default async function FeaturedPage() {
   const [featured, allTools] = await Promise.all([getFeaturedTools(), getAllPublishedTools()])
 

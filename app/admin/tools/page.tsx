@@ -2,6 +2,8 @@ import { getTools, getCategories, publishTool, deleteTool } from './actions'
 import { ToolForm } from './tool-form'
 import { Badge } from '@/components/ui/badge'
 
+export const dynamic = 'force-dynamic'
+
 export default async function ToolsPage({
   searchParams,
 }: {
