@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node -e \"if(process.env.DATABASE_URL){const {execSync}=require('child_process');execSync('npx drizzle-kit migrate --config=drizzle.pg.config.ts',{stdio:'inherit'});execSync('npx tsx scripts/migrate-json-to-db.ts',{stdio:'inherit'})}else if(process.env.VERCEL){throw new Error('[prebuild] DATABASE_URL is required on Vercel.')}else{console.log('[prebuild] DATABASE_URL not set, skipping migration and default data import.')}\"",
+    "prebuild": "tsx scripts/prebuild.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
