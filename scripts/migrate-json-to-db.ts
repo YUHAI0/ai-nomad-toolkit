@@ -34,7 +34,7 @@ function getLogoUrl(tool: any) {
 
   try {
     const host = new URL(tool.url_official).hostname.replace(/^www\./, '')
-    return `https://logo.clearbit.com/${host}`
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=128`
   } catch {
     return null
   }

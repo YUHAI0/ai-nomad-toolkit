@@ -21,7 +21,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/chat.openai.com"
+    "logo_url": "/logos/chatgpt.png"
   },
   {
     "id": "claude",
@@ -45,7 +45,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/claude.ai"
+    "logo_url": "/logos/claude.svg"
   },
   {
     "id": "perplexity",
@@ -69,7 +69,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/perplexity.ai"
+    "logo_url": "/logos/perplexity.svg"
   },
   {
     "id": "gemini",
@@ -93,7 +93,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/gemini.google.com"
+    "logo_url": "/logos/gemini.svg"
   },
   {
     "id": "deepseek",
@@ -117,7 +117,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/deepseek.com"
+    "logo_url": "/logos/deepseek.svg"
   },
   {
     "id": "grok",
@@ -141,7 +141,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/x.ai"
+    "logo_url": "/logos/grok.svg"
   },
   {
     "id": "poe",
@@ -165,7 +165,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/poe.com"
+    "logo_url": "/logos/poe.svg"
   },
   {
     "id": "mistral",
@@ -189,7 +189,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/mistral.ai"
+    "logo_url": "/logos/mistral.png"
   },
   {
     "id": "sale-samurai",
@@ -213,7 +213,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/salesamurai.io"
+    "logo_url": "/logos/sale-samurai.png"
   },
   {
     "id": "kittl",
@@ -237,7 +237,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/kittl.com"
+    "logo_url": "/logos/kittl.png"
   },
   {
     "id": "printify",
@@ -261,7 +261,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/printify.com"
+    "logo_url": "/logos/printify.png"
   },
   {
     "id": "printful",
@@ -285,7 +285,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/printful.com"
+    "logo_url": "/logos/printful.png"
   },
   {
     "id": "erank",
@@ -309,7 +309,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/erank.com"
+    "logo_url": "/logos/erank.png"
   },
   {
     "id": "marmalead",
@@ -333,7 +333,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/marmalead.com"
+    "logo_url": "/logos/marmalead.png"
   },
   {
     "id": "alura",
@@ -357,7 +357,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/alura.io"
+    "logo_url": "/logos/alura.png"
   },
   {
     "id": "placeit",
@@ -381,7 +381,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/placeit.net"
+    "logo_url": "/logos/placeit.png"
   },
   {
     "id": "creative-fabrica",
@@ -405,7 +405,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/creativefabrica.com"
+    "logo_url": "/logos/creative-fabrica.png"
   },
   {
     "id": "canva",
@@ -429,7 +429,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/canva.com"
+    "logo_url": "/logos/canva.png"
   },
   {
     "id": "leonardo-ai",
@@ -453,7 +453,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/leonardo.ai"
+    "logo_url": "/logos/leonardo-ai.png"
   },
   {
     "id": "ideogram",
@@ -477,7 +477,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/ideogram.ai"
+    "logo_url": "/logos/ideogram.png"
   },
   {
     "id": "midjourney",
@@ -501,7 +501,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/midjourney.com"
+    "logo_url": "/logos/midjourney.png"
   },
   {
     "id": "adobe-firefly",
@@ -525,7 +525,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/firefly.adobe.com"
+    "logo_url": "/logos/adobe-firefly.png"
   },
   {
     "id": "recraft",
@@ -549,7 +549,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/recraft.ai"
+    "logo_url": "/logos/recraft.png"
   },
   {
     "id": "remove-bg",
@@ -573,7 +573,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/remove.bg"
+    "logo_url": "/logos/remove-bg.svg"
   },
   {
     "id": "elevenlabs",
@@ -597,7 +597,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/elevenlabs.io"
+    "logo_url": "/logos/elevenlabs.svg"
   },
   {
     "id": "runway",
@@ -621,7 +621,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/runwayml.com"
+    "logo_url": "/logos/runway.png"
   },
   {
     "id": "descript",
@@ -645,7 +645,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/descript.com"
+    "logo_url": "/logos/descript.png"
   },
   {
     "id": "notion-ai",
@@ -669,7 +669,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/notion.so"
+    "logo_url": "/logos/notion-ai.svg"
   },
   {
     "id": "jasper-ai",
@@ -693,7 +693,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/jasper.ai"
+    "logo_url": "/logos/jasper-ai.png"
   },
   {
     "id": "copy-ai",
@@ -717,7 +717,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/copy.ai"
+    "logo_url": "/logos/copy-ai.png"
   },
   {
     "id": "opus-clip",
@@ -741,7 +741,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/opus.pro"
+    "logo_url": "/logos/opus-clip.png"
   },
   {
     "id": "capcut",
@@ -765,7 +765,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/capcut.com"
+    "logo_url": "/logos/capcut.png"
   },
   {
     "id": "zapier",
@@ -789,7 +789,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/zapier.com"
+    "logo_url": "/logos/zapier.svg"
   },
   {
     "id": "deepl",
@@ -813,7 +813,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/deepl.com"
+    "logo_url": "/logos/deepl.svg"
   },
   {
     "id": "grammarly",
@@ -837,7 +837,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/grammarly.com"
+    "logo_url": "/logos/grammarly.svg"
   },
   {
     "id": "writesonic",
@@ -861,7 +861,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/writesonic.com"
+    "logo_url": "/logos/writesonic.png"
   },
   {
     "id": "cursor",
@@ -885,7 +885,7 @@
     "featured": true,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/cursor.com"
+    "logo_url": "/logos/cursor.svg"
   },
   {
     "id": "github-copilot",
@@ -909,7 +909,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/github.com"
+    "logo_url": "/logos/github-copilot.svg"
   },
   {
     "id": "windsurf",
@@ -933,7 +933,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/codeium.com"
+    "logo_url": "/logos/windsurf.svg"
   },
   {
     "id": "v0",
@@ -957,7 +957,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/v0.dev"
+    "logo_url": "/logos/v0.svg"
   },
   {
     "id": "bolt-new",
@@ -981,7 +981,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/bolt.new"
+    "logo_url": "/logos/bolt-new.png"
   },
   {
     "id": "lovable",
@@ -1005,7 +1005,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/lovable.dev"
+    "logo_url": "/logos/lovable.png"
   },
   {
     "id": "replit",
@@ -1029,7 +1029,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/replit.com"
+    "logo_url": "/logos/replit.svg"
   },
   {
     "id": "vercel",
@@ -1053,7 +1053,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/vercel.com"
+    "logo_url": "/logos/vercel.svg"
   },
   {
     "id": "supabase",
@@ -1077,7 +1077,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/supabase.com"
+    "logo_url": "/logos/supabase.svg"
   },
   {
     "id": "lemon-squeezy",
@@ -1101,7 +1101,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/lemonsqueezy.com"
+    "logo_url": "/logos/lemon-squeezy.svg"
   },
   {
     "id": "safetywing",
@@ -1125,7 +1125,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/safetywing.com"
+    "logo_url": "/logos/safetywing.png"
   },
   {
     "id": "wise",
@@ -1149,7 +1149,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/wise.com"
+    "logo_url": "/logos/wise.svg"
   },
   {
     "id": "revolut",
@@ -1173,7 +1173,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/revolut.com"
+    "logo_url": "/logos/revolut.svg"
   },
   {
     "id": "ivisa",
@@ -1197,7 +1197,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/ivisa.com"
+    "logo_url": "/logos/ivisa.png"
   },
   {
     "id": "nomad-list",
@@ -1221,7 +1221,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/nomadlist.com"
+    "logo_url": "/logos/nomad-list.png"
   },
   {
     "id": "workfrom",
@@ -1245,7 +1245,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/workfrom.co"
+    "logo_url": "/logos/workfrom.png"
   },
   {
     "id": "airbnb",
@@ -1269,7 +1269,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/airbnb.com"
+    "logo_url": "/logos/airbnb.svg"
   },
   {
     "id": "upwork",
@@ -1293,7 +1293,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/upwork.com"
+    "logo_url": "/logos/upwork.svg"
   },
   {
     "id": "fiverr",
@@ -1317,7 +1317,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/fiverr.com"
+    "logo_url": "/logos/fiverr.svg"
   },
   {
     "id": "toptal",
@@ -1341,7 +1341,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/toptal.com"
+    "logo_url": "/logos/toptal.svg"
   },
   {
     "id": "we-work-remotely",
@@ -1365,7 +1365,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/weworkremotely.com"
+    "logo_url": "/logos/we-work-remotely.png"
   },
   {
     "id": "flexjobs",
@@ -1389,7 +1389,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/flexjobs.com"
+    "logo_url": "/logos/flexjobs.png"
   },
   {
     "id": "99designs",
@@ -1413,7 +1413,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/99designs.com"
+    "logo_url": "/logos/99designs.svg"
   },
   {
     "id": "freelancer",
@@ -1437,7 +1437,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/freelancer.com"
+    "logo_url": "/logos/freelancer.svg"
   },
   {
     "id": "airtable",
@@ -1461,7 +1461,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/airtable.com"
+    "logo_url": "/logos/airtable.svg"
   },
   {
     "id": "gumroad",
@@ -1485,7 +1485,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/gumroad.com"
+    "logo_url": "/logos/gumroad.svg"
   },
   {
     "id": "indie-hackers",
@@ -1509,7 +1509,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/indiehackers.com"
+    "logo_url": "/logos/indie-hackers.svg"
   },
   {
     "id": "product-hunt",
@@ -1533,7 +1533,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/producthunt.com"
+    "logo_url": "/logos/product-hunt.svg"
   },
   {
     "id": "hacker-news",
@@ -1557,7 +1557,7 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/news.ycombinator.com"
+    "logo_url": "/logos/hacker-news.svg"
   },
   {
     "id": "v2ex",
@@ -1581,7 +1581,7 @@
     "featured": false,
     "region": "cn",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/v2ex.com"
+    "logo_url": "/logos/v2ex.svg"
   },
   {
     "id": "jike",
@@ -1605,7 +1605,7 @@
     "featured": false,
     "region": "cn",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/jike.city"
+    "logo_url": "/logos/jike.png"
   },
   {
     "id": "shopify",
@@ -1629,6 +1629,6 @@
     "featured": false,
     "region": "global",
     "last_verified": "2026-06-24",
-    "logo_url": "https://logo.clearbit.com/shopify.com"
+    "logo_url": "/logos/shopify.svg"
   }
 ]
