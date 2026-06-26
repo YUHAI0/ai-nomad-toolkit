@@ -7,7 +7,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["AI 助手", "GPT-4o", "写作", "效率"],
+    "tags": [
+      "AI 助手",
+      "GPT-4o",
+      "写作",
+      "效率"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Plus 订阅解锁更强模型",
@@ -15,7 +20,8 @@
     "description": "ChatGPT 是数字游民和内容创作者最常用的通用 AI 助手，可用于写作、翻译、选题、代码辅助、市场调研和日常自动化。适合作为站内所有 AI 工作流的基础入口。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/chat.openai.com"
   },
   {
     "id": "claude",
@@ -25,7 +31,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["AI 助手", "长文本", "写作", "分析"],
+    "tags": [
+      "AI 助手",
+      "长文本",
+      "写作",
+      "分析"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Pro 订阅解锁更高额度",
@@ -33,7 +44,8 @@
     "description": "Claude 适合处理长文档、PRD、代码说明、文案润色和复杂分析任务。对需要阅读大量资料、整理策略和输出结构化内容的数字游民很实用。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/claude.ai"
   },
   {
     "id": "perplexity",
@@ -43,7 +55,12 @@
     "has_affiliate": true,
     "affiliate_rate": "按付费用户",
     "category": "main-ai",
-    "tags": ["AI 搜索", "研究", "资料来源", "P0"],
+    "tags": [
+      "AI 搜索",
+      "研究",
+      "资料来源",
+      "P0"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Pro 订阅提供更高额度",
@@ -51,7 +68,8 @@
     "description": "Perplexity 适合做市场调研、竞品研究、旅行信息查询和内容资料收集。它会给出引用来源，适合需要快速验证信息可靠性的用户。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/perplexity.ai"
   },
   {
     "id": "gemini",
@@ -61,7 +79,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["Google", "AI 助手", "多模态", "办公"],
+    "tags": [
+      "Google",
+      "AI 助手",
+      "多模态",
+      "办公"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；高级能力随 Google 订阅提供",
@@ -69,7 +92,8 @@
     "description": "Gemini 适合已经使用 Google 生态的用户，用于搜索、写作、总结和多模态任务。对 Gmail、Docs、Drive 等工作流有潜在协同价值。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/gemini.google.com"
   },
   {
     "id": "deepseek",
@@ -79,7 +103,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["AI 助手", "中文", "代码", "性价比"],
+    "tags": [
+      "AI 助手",
+      "中文",
+      "代码",
+      "性价比"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；API 按量计费",
@@ -87,7 +116,8 @@
     "description": "DeepSeek 适合中文内容、代码解释、逻辑推理和低成本 API 场景。对中文用户和独立开发者来说，是一个值得加入工具箱的大模型选项。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/deepseek.com"
   },
   {
     "id": "grok",
@@ -97,7 +127,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["xAI", "AI 助手", "实时信息", "社媒"],
+    "tags": [
+      "xAI",
+      "AI 助手",
+      "实时信息",
+      "社媒"
+    ],
     "is_ai": true,
     "pricing_type": "paid",
     "pricing_desc": "随 X / xAI 相关订阅提供",
@@ -105,7 +140,8 @@
     "description": "Grok 与 X 生态结合紧密，适合关注实时话题、社媒趋势和热点内容的人群。可用于内容选题、观点整理和快速了解热门讨论。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/x.ai"
   },
   {
     "id": "poe",
@@ -115,7 +151,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["多模型", "AI Chat", "模型聚合", "效率"],
+    "tags": [
+      "多模型",
+      "AI Chat",
+      "模型聚合",
+      "效率"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；订阅解锁更多模型额度",
@@ -123,7 +164,8 @@
     "description": "Poe 适合想在一个界面中试用多个 AI 模型的用户。它适合比较不同模型输出、快速切换写作风格，以及体验多个 AI bot。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/poe.com"
   },
   {
     "id": "mistral",
@@ -133,7 +175,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "main-ai",
-    "tags": ["大模型", "欧洲 AI", "API", "开源"],
+    "tags": [
+      "大模型",
+      "欧洲 AI",
+      "API",
+      "开源"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "部分模型和 API 按产品计费",
@@ -141,7 +188,8 @@
     "description": "Mistral 提供多种模型和 API 选择，适合开发者、AI 应用构建者和关注模型多样性的用户。它也是大模型生态中值得关注的独立选项。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/mistral.ai"
   },
   {
     "id": "sale-samurai",
@@ -151,7 +199,12 @@
     "has_affiliate": true,
     "affiliate_rate": "40% 循环",
     "category": "etsy-tools",
-    "tags": ["Etsy", "关键词", "SEO", "高佣金"],
+    "tags": [
+      "Etsy",
+      "关键词",
+      "SEO",
+      "高佣金"
+    ],
     "is_ai": true,
     "pricing_type": "paid",
     "pricing_desc": "付费订阅",
@@ -159,7 +212,8 @@
     "description": "Sale Samurai 是 PRD 中 Etsy 专区的 P0 工具，主打 Etsy 关键词、搜索量、竞争分析和 Listing 优化。适合想通过关键词获得自然流量的 Etsy 卖家。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/salesamurai.io"
   },
   {
     "id": "kittl",
@@ -169,7 +223,12 @@
     "has_affiliate": true,
     "affiliate_rate": "30%",
     "category": "etsy-tools",
-    "tags": ["POD", "Etsy", "设计模板", "高转化"],
+    "tags": [
+      "POD",
+      "Etsy",
+      "设计模板",
+      "高转化"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；付费解锁更多素材和商用能力",
@@ -177,7 +236,8 @@
     "description": "Kittl 适合制作 T 恤、海报、贴纸、数字下载等 POD 和 Etsy 商品设计。模板质量高，适合没有专业设计背景的卖家快速产出商品图。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/kittl.com"
   },
   {
     "id": "printify",
@@ -187,7 +247,12 @@
     "has_affiliate": true,
     "affiliate_rate": "阶梯佣金",
     "category": "etsy-tools",
-    "tags": ["POD", "Etsy", "履约", "供应商"],
+    "tags": [
+      "POD",
+      "Etsy",
+      "履约",
+      "供应商"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费开店；按订单和服务计费",
@@ -195,7 +260,8 @@
     "description": "Printify 是大型 POD 供应商平台，可与 Etsy 直连，适合销售 T 恤、马克杯、海报等按需生产商品。它是 Etsy 卖家从设计到履约的重要工具。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/printify.com"
   },
   {
     "id": "printful",
@@ -205,7 +271,12 @@
     "has_affiliate": true,
     "affiliate_rate": "申请中",
     "category": "etsy-tools",
-    "tags": ["POD", "Etsy", "履约", "品质稳定"],
+    "tags": [
+      "POD",
+      "Etsy",
+      "履约",
+      "品质稳定"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费使用；按订单履约收费",
@@ -213,7 +284,8 @@
     "description": "Printful 是 Printify 的主要竞品，适合重视生产质量、物流和品牌体验的 POD 卖家。可用于 Etsy 商品履约和独立站商品生产。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/printful.com"
   },
   {
     "id": "erank",
@@ -223,7 +295,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "etsy-tools",
-    "tags": ["Etsy", "SEO", "关键词", "竞品分析"],
+    "tags": [
+      "Etsy",
+      "SEO",
+      "关键词",
+      "竞品分析"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；付费版提供更多数据",
@@ -231,7 +308,8 @@
     "description": "Erank 适合分析 Etsy 关键词、趋势和竞品 Listing。它能帮助卖家判断关键词竞争度，优化标题、标签和商品定位。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/erank.com"
   },
   {
     "id": "marmalead",
@@ -241,7 +319,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "etsy-tools",
-    "tags": ["Etsy", "关键词", "Listing", "SEO"],
+    "tags": [
+      "Etsy",
+      "关键词",
+      "Listing",
+      "SEO"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "付费订阅",
@@ -249,7 +332,8 @@
     "description": "Marmalead 聚焦 Etsy 关键词质量和 Listing 优化，适合需要系统提升自然搜索表现的卖家。它可作为 Erank 的补充工具。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/marmalead.com"
   },
   {
     "id": "alura",
@@ -259,7 +343,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "etsy-tools",
-    "tags": ["Etsy", "店铺分析", "Listing", "选品"],
+    "tags": [
+      "Etsy",
+      "店铺分析",
+      "Listing",
+      "选品"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费试用；付费订阅",
@@ -267,7 +356,8 @@
     "description": "Alura 用于 Etsy 店铺研究、商品分析、关键词和 Listing 优化。适合新卖家观察竞品，也适合成熟卖家寻找增长机会。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/alura.io"
   },
   {
     "id": "placeit",
@@ -277,7 +367,12 @@
     "has_affiliate": true,
     "affiliate_rate": "15%",
     "category": "etsy-tools",
-    "tags": ["Mockup", "POD", "模板", "产品图"],
+    "tags": [
+      "Mockup",
+      "POD",
+      "模板",
+      "产品图"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "按模板或订阅收费",
@@ -285,7 +380,8 @@
     "description": "Placeit 提供大量产品 Mockup、视频模板和品牌素材，适合 Etsy/POD 卖家快速制作产品展示图，提高 Listing 的点击和转化。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/placeit.net"
   },
   {
     "id": "creative-fabrica",
@@ -295,7 +391,12 @@
     "has_affiliate": true,
     "affiliate_rate": "高佣金",
     "category": "etsy-tools",
-    "tags": ["素材", "字体", "SVG", "商用授权"],
+    "tags": [
+      "素材",
+      "字体",
+      "SVG",
+      "商用授权"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费素材和付费订阅并存",
@@ -303,7 +404,8 @@
     "description": "Creative Fabrica 适合 Etsy 数字商品、POD 设计、字体包和 SVG 素材创作者。它提供大量可商用素材，是 Etsy 设计工作流的重要来源。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/creativefabrica.com"
   },
   {
     "id": "canva",
@@ -313,7 +415,12 @@
     "has_affiliate": true,
     "affiliate_rate": "申请中",
     "category": "etsy-tools",
-    "tags": ["设计", "Mockup", "产品图", "模板"],
+    "tags": [
+      "设计",
+      "Mockup",
+      "产品图",
+      "模板"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Pro 订阅解锁高级素材",
@@ -321,7 +428,8 @@
     "description": "Canva 适合 Etsy 卖家制作产品图、社媒图、Mockup 和下载类商品模板。它上手门槛低，适合非设计师快速产出可发布素材。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/canva.com"
   },
   {
     "id": "leonardo-ai",
@@ -331,7 +439,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "etsy-tools",
-    "tags": ["AI 图像", "商业授权", "POD", "设计"],
+    "tags": [
+      "AI 图像",
+      "商业授权",
+      "POD",
+      "设计"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -339,7 +452,8 @@
     "description": "Leonardo AI 适合生成产品图、插画、POD 图案和视觉素材。PRD 将其列入 Etsy 专区，是因为它在商业授权和视觉创作场景里很实用。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/leonardo.ai"
   },
   {
     "id": "ideogram",
@@ -349,7 +463,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "etsy-tools",
-    "tags": ["AI 图像", "文字生成", "POD", "海报"],
+    "tags": [
+      "AI 图像",
+      "文字生成",
+      "POD",
+      "海报"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -357,7 +476,8 @@
     "description": "Ideogram 适合制作带文字的海报、贴纸、T 恤图案和社媒视觉内容。相比普通图像模型，它在图中文字准确性方面更突出。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/ideogram.ai"
   },
   {
     "id": "midjourney",
@@ -367,7 +487,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "design-create",
-    "tags": ["AI 图像", "视觉创作", "插画", "设计"],
+    "tags": [
+      "AI 图像",
+      "视觉创作",
+      "插画",
+      "设计"
+    ],
     "is_ai": true,
     "pricing_type": "paid",
     "pricing_desc": "付费订阅",
@@ -375,7 +500,8 @@
     "description": "Midjourney 是 AI 图像生成领域的代表工具，适合视觉灵感、插画、概念图和风格化图片生成。适合设计师、内容创作者和 POD 卖家探索视觉方向。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/midjourney.com"
   },
   {
     "id": "adobe-firefly",
@@ -385,7 +511,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "design-create",
-    "tags": ["Adobe", "AI 图像", "商用安全", "设计"],
+    "tags": [
+      "Adobe",
+      "AI 图像",
+      "商用安全",
+      "设计"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；Adobe 订阅解锁更多能力",
@@ -393,7 +524,8 @@
     "description": "Adobe Firefly 适合重视商用授权安全的设计和营销场景。它与 Adobe 生态结合紧密，适合用于图片生成、补图和视觉内容制作。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/firefly.adobe.com"
   },
   {
     "id": "recraft",
@@ -403,7 +535,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "design-create",
-    "tags": ["AI 矢量", "SVG", "POD", "设计"],
+    "tags": [
+      "AI 矢量",
+      "SVG",
+      "POD",
+      "设计"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -411,7 +548,8 @@
     "description": "Recraft 适合生成矢量风格图像、SVG 和品牌视觉素材。对 POD 卖家、图标设计和可商用设计资产制作尤其有价值。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/recraft.ai"
   },
   {
     "id": "remove-bg",
@@ -421,7 +559,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "design-create",
-    "tags": ["去背景", "产品图", "Etsy", "设计"],
+    "tags": [
+      "去背景",
+      "产品图",
+      "Etsy",
+      "设计"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "低清免费；高清图按量或订阅收费",
@@ -429,7 +572,8 @@
     "description": "Remove.bg 适合快速处理产品图、头像、素材和 Mockup 图片。对 Etsy 卖家和内容创作者来说，它能显著减少重复修图时间。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/remove.bg"
   },
   {
     "id": "elevenlabs",
@@ -439,7 +583,12 @@
     "has_affiliate": true,
     "affiliate_rate": "高佣金",
     "category": "design-create",
-    "tags": ["AI 配音", "声音克隆", "播客", "视频"],
+    "tags": [
+      "AI 配音",
+      "声音克隆",
+      "播客",
+      "视频"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -447,7 +596,8 @@
     "description": "ElevenLabs 适合制作短视频配音、播客旁白、多语言音频和声音克隆。对内容创作者来说，它能把文字内容快速变成自然语音。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/elevenlabs.io"
   },
   {
     "id": "runway",
@@ -457,7 +607,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "design-create",
-    "tags": ["AI 视频", "视频编辑", "生成视频", "创作"],
+    "tags": [
+      "AI 视频",
+      "视频编辑",
+      "生成视频",
+      "创作"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -465,7 +620,8 @@
     "description": "Runway 适合 AI 视频生成、视频编辑、背景处理和创意短片制作。适合短视频创作者、设计师和想快速测试视觉概念的人。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/runwayml.com"
   },
   {
     "id": "descript",
@@ -475,7 +631,12 @@
     "has_affiliate": true,
     "affiliate_rate": "高佣金",
     "category": "design-create",
-    "tags": ["AI 视频", "播客", "剪辑", "转录"],
+    "tags": [
+      "AI 视频",
+      "播客",
+      "剪辑",
+      "转录"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；付费订阅解锁更多编辑能力",
@@ -483,7 +644,8 @@
     "description": "Descript 适合视频、播客、课程和短内容剪辑。它通过文本转录来编辑音视频，降低了内容创作者剪辑和改稿的门槛。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/descript.com"
   },
   {
     "id": "notion-ai",
@@ -493,7 +655,12 @@
     "has_affiliate": true,
     "affiliate_rate": "20%",
     "category": "content-social",
-    "tags": ["笔记", "AI 写作", "内容管理", "P0"],
+    "tags": [
+      "笔记",
+      "AI 写作",
+      "内容管理",
+      "P0"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "Notion 免费版可用；AI 能力通常需订阅",
@@ -501,7 +668,8 @@
     "description": "Notion AI 适合做选题库、内容日历、脚本草稿、知识库和团队协作。对小红书和自媒体创作者来说，它既是笔记系统，也是内容生产管理后台。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/notion.so"
   },
   {
     "id": "jasper-ai",
@@ -511,7 +679,12 @@
     "has_affiliate": true,
     "affiliate_rate": "30% 循环",
     "category": "content-social",
-    "tags": ["AI 文案", "营销", "内容创作", "高佣金"],
+    "tags": [
+      "AI 文案",
+      "营销",
+      "内容创作",
+      "高佣金"
+    ],
     "is_ai": true,
     "pricing_type": "paid",
     "pricing_desc": "付费订阅",
@@ -519,7 +692,8 @@
     "description": "Jasper AI 适合品牌营销文案、广告语、邮件、博客和社媒内容生成。PRD 将它列为内容创作板块高佣金工具，适合面向商业写作用户推荐。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/jasper.ai"
   },
   {
     "id": "copy-ai",
@@ -529,7 +703,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "content-social",
-    "tags": ["AI 文案", "小红书", "营销", "社媒"],
+    "tags": [
+      "AI 文案",
+      "小红书",
+      "营销",
+      "社媒"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -537,7 +716,8 @@
     "description": "Copy.ai 适合生成广告文案、社媒标题、小红书笔记、产品描述和营销邮件。对需要快速测试多个文案版本的创作者很实用。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/copy.ai"
   },
   {
     "id": "opus-clip",
@@ -547,7 +727,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "content-social",
-    "tags": ["短视频", "AI 剪辑", "内容复用", "社媒"],
+    "tags": [
+      "短视频",
+      "AI 剪辑",
+      "内容复用",
+      "社媒"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -555,7 +740,8 @@
     "description": "Opus Clip 适合把播客、访谈、课程、直播等长视频自动剪成短视频片段。适合小红书、TikTok、Reels 和 Shorts 内容复用。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/opus.pro"
   },
   {
     "id": "capcut",
@@ -565,7 +751,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "content-social",
-    "tags": ["短视频", "剪辑", "模板", "社媒"],
+    "tags": [
+      "短视频",
+      "剪辑",
+      "模板",
+      "社媒"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；部分高级功能付费",
@@ -573,7 +764,8 @@
     "description": "CapCut 适合制作小红书、TikTok、Reels 和 Shorts 内容，提供模板、字幕、特效和基础 AI 功能。上手快，适合日常高频发布。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/capcut.com"
   },
   {
     "id": "zapier",
@@ -583,7 +775,12 @@
     "has_affiliate": true,
     "affiliate_rate": "高佣金",
     "category": "content-social",
-    "tags": ["自动化", "工作流", "无代码", "效率"],
+    "tags": [
+      "自动化",
+      "工作流",
+      "无代码",
+      "效率"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；高级自动化付费",
@@ -591,7 +788,8 @@
     "description": "Zapier 适合把表单、邮件、表格、社媒和数据库连接起来，自动执行重复任务。对内容创作者和独立开发者来说，是减少运营杂活的核心工具。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/zapier.com"
   },
   {
     "id": "deepl",
@@ -601,7 +799,12 @@
     "has_affiliate": true,
     "affiliate_rate": "按订阅",
     "category": "content-social",
-    "tags": ["翻译", "跨境", "写作", "AI"],
+    "tags": [
+      "翻译",
+      "跨境",
+      "写作",
+      "AI"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Pro 解锁更多额度和隐私能力",
@@ -609,7 +812,8 @@
     "description": "DeepL 适合翻译商品描述、邮件、文章、社媒文案和客户沟通内容。对跨境卖家、数字游民和多语言内容创作者非常实用。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/deepl.com"
   },
   {
     "id": "grammarly",
@@ -619,7 +823,12 @@
     "has_affiliate": true,
     "affiliate_rate": "$0.2–20/用户",
     "category": "content-social",
-    "tags": ["英文写作", "语法检查", "跨境", "效率"],
+    "tags": [
+      "英文写作",
+      "语法检查",
+      "跨境",
+      "效率"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Premium 解锁高级建议",
@@ -627,7 +836,8 @@
     "description": "Grammarly 适合写英文邮件、商品描述、博客、简历和客户沟通内容。对跨境卖家和远程工作者来说，是降低英文表达错误率的基础工具。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/grammarly.com"
   },
   {
     "id": "writesonic",
@@ -637,7 +847,12 @@
     "has_affiliate": true,
     "affiliate_rate": "30%",
     "category": "content-social",
-    "tags": ["AI SEO", "写作", "博客", "营销"],
+    "tags": [
+      "AI SEO",
+      "写作",
+      "博客",
+      "营销"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；付费订阅提高额度",
@@ -645,7 +860,8 @@
     "description": "Writesonic 适合生成 SEO 文章、博客初稿、落地页文案和营销内容。适合希望通过内容获取自然搜索流量的创作者和站长。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/writesonic.com"
   },
   {
     "id": "cursor",
@@ -655,7 +871,12 @@
     "has_affiliate": true,
     "affiliate_rate": "申请中",
     "category": "dev-tools",
-    "tags": ["编程", "AI IDE", "Vibe Coding", "高佣金"],
+    "tags": [
+      "编程",
+      "AI IDE",
+      "Vibe Coding",
+      "高佣金"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；Pro $20/月",
@@ -663,7 +884,8 @@
     "description": "Cursor 是独立开发者和 Vibe Coding 用户的核心 AI IDE。它适合快速理解代码、生成组件、重构文件、定位问题，并把自然语言变成可运行的产品迭代。",
     "featured": true,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/cursor.com"
   },
   {
     "id": "github-copilot",
@@ -673,7 +895,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "dev-tools",
-    "tags": ["编程", "GitHub", "代码补全", "AI"],
+    "tags": [
+      "编程",
+      "GitHub",
+      "代码补全",
+      "AI"
+    ],
     "is_ai": true,
     "pricing_type": "paid",
     "pricing_desc": "按个人或团队订阅收费",
@@ -681,7 +908,8 @@
     "description": "GitHub Copilot 集成在主流编辑器和 GitHub 生态中，适合代码补全、函数生成、测试辅助和日常开发提效。对已有 GitHub 工作流的开发者很自然。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/github.com"
   },
   {
     "id": "windsurf",
@@ -691,7 +919,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "dev-tools",
-    "tags": ["AI IDE", "编程", "Cursor 竞品", "免费额度"],
+    "tags": [
+      "AI IDE",
+      "编程",
+      "Cursor 竞品",
+      "免费额度"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度较多；高级能力付费",
@@ -699,7 +932,8 @@
     "description": "Windsurf 是 Cursor 的主要竞品之一，强调 AI 编程工作流和较友好的免费额度。适合想比较不同 AI IDE 的独立开发者。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/codeium.com"
   },
   {
     "id": "v0",
@@ -709,7 +943,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "dev-tools",
-    "tags": ["React", "UI 生成", "Vercel", "原型"],
+    "tags": [
+      "React",
+      "UI 生成",
+      "Vercel",
+      "原型"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；高级额度付费",
@@ -717,7 +956,8 @@
     "description": "v0 by Vercel 适合快速生成 React/Tailwind UI、落地页、后台页面和产品原型。对需要快速验证界面的独立开发者非常实用。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/v0.dev"
   },
   {
     "id": "bolt-new",
@@ -727,7 +967,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "dev-tools",
-    "tags": ["AI 建站", "Web 应用", "原型", "开发"],
+    "tags": [
+      "AI 建站",
+      "Web 应用",
+      "原型",
+      "开发"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；高级额度付费",
@@ -735,7 +980,8 @@
     "description": "Bolt.new 适合用自然语言快速生成 Web 应用、原型和功能页面。对非专业开发者和独立开发者来说，它能缩短从想法到可运行 Demo 的距离。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/bolt.new"
   },
   {
     "id": "lovable",
@@ -745,7 +991,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "dev-tools",
-    "tags": ["AI 建站", "SaaS", "全栈", "MVP"],
+    "tags": [
+      "AI 建站",
+      "SaaS",
+      "全栈",
+      "MVP"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；高级功能付费",
@@ -753,7 +1004,8 @@
     "description": "Lovable 适合用对话方式生成产品界面、业务逻辑和完整 Web 应用。它适合独立开发者快速做 MVP、内部工具和小型 SaaS。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/lovable.dev"
   },
   {
     "id": "replit",
@@ -763,7 +1015,12 @@
     "has_affiliate": true,
     "affiliate_rate": "申请中",
     "category": "dev-tools",
-    "tags": ["云端 IDE", "部署", "编程", "AI"],
+    "tags": [
+      "云端 IDE",
+      "部署",
+      "编程",
+      "AI"
+    ],
     "is_ai": true,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；高级环境和部署付费",
@@ -771,7 +1028,8 @@
     "description": "Replit 适合在浏览器里写代码、运行项目和部署小应用。对移动办公、教学、原型验证和轻量级产品开发很方便。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/replit.com"
   },
   {
     "id": "vercel",
@@ -781,7 +1039,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "dev-tools",
-    "tags": ["部署", "Next.js", "前端", "Serverless"],
+    "tags": [
+      "部署",
+      "Next.js",
+      "前端",
+      "Serverless"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；商业用量付费",
@@ -789,7 +1052,8 @@
     "description": "Vercel 是 Next.js 应用最常用的部署平台，提供 Git 集成、预览部署、边缘网络和自动 HTTPS。适合独立开发者快速上线产品。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/vercel.com"
   },
   {
     "id": "supabase",
@@ -799,7 +1063,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "dev-tools",
-    "tags": ["数据库", "Postgres", "Auth", "开源"],
+    "tags": [
+      "数据库",
+      "Postgres",
+      "Auth",
+      "开源"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费额度可用；按用量和项目付费",
@@ -807,7 +1076,8 @@
     "description": "Supabase 适合独立开发者快速获得数据库、认证、存储和 API 能力。它基于 Postgres，适合从 MVP 逐步扩展到正式产品。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/supabase.com"
   },
   {
     "id": "lemon-squeezy",
@@ -817,7 +1087,12 @@
     "has_affiliate": true,
     "affiliate_rate": "高佣金",
     "category": "dev-tools",
-    "tags": ["收款", "数字产品", "SaaS", "独立开发"],
+    "tags": [
+      "收款",
+      "数字产品",
+      "SaaS",
+      "独立开发"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "按交易和服务收费",
@@ -825,7 +1100,8 @@
     "description": "Lemon Squeezy 适合销售软件、模板、电子书、订阅和数字产品。它处理支付、税务和交付流程，是独立开发者商业化常用工具。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/lemonsqueezy.com"
   },
   {
     "id": "safetywing",
@@ -835,7 +1111,12 @@
     "has_affiliate": true,
     "affiliate_rate": "10% 循环",
     "category": "nomad-life",
-    "tags": ["旅行保险", "数字游民", "远程工作", "高佣金"],
+    "tags": [
+      "旅行保险",
+      "数字游民",
+      "远程工作",
+      "高佣金"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "按保险产品和周期收费",
@@ -843,7 +1124,8 @@
     "description": "SafetyWing 面向数字游民、远程工作者和长期旅居者提供保险产品。PRD 将它列为非 AI 板块的重点变现工具，适合旅居场景推荐。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/safetywing.com"
   },
   {
     "id": "wise",
@@ -853,7 +1135,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["跨境收款", "多币种", "汇款", "数字游民"],
+    "tags": [
+      "跨境收款",
+      "多币种",
+      "汇款",
+      "数字游民"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "开户和部分功能免费；转账按费用规则收费",
@@ -861,7 +1148,8 @@
     "description": "Wise 适合自由职业者、远程工作者和跨境卖家收款、换汇和国际转账。对数字游民来说，它是处理多币种资金流的重要工具。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/wise.com"
   },
   {
     "id": "revolut",
@@ -871,7 +1159,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["多币种", "银行卡", "金融", "旅居"],
+    "tags": [
+      "多币种",
+      "银行卡",
+      "金融",
+      "旅居"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费账户可用；高级计划付费",
@@ -879,7 +1172,8 @@
     "description": "Revolut 适合需要多币种账户、银行卡和旅行支付能力的用户。对经常跨国移动的数字游民来说，它是常见金融工具之一。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/revolut.com"
   },
   {
     "id": "ivisa",
@@ -889,7 +1183,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["签证", "旅行", "数字游民", "代办"],
+    "tags": [
+      "签证",
+      "旅行",
+      "数字游民",
+      "代办"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "按签证和服务收费",
@@ -897,7 +1196,8 @@
     "description": "iVisa 适合需要办理旅行签证、入境文件和相关材料的数字游民。它降低了跨国旅居前的信息查询和申请成本。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/ivisa.com"
   },
   {
     "id": "nomad-list",
@@ -907,7 +1207,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "nomad-life",
-    "tags": ["城市排名", "旅居", "成本", "社区"],
+    "tags": [
+      "城市排名",
+      "旅居",
+      "成本",
+      "社区"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "公开信息可看；社区和高级数据可能付费",
@@ -915,7 +1220,8 @@
     "description": "Nomad List 提供城市成本、网络、天气、安全、生活质量和社区数据。适合数字游民规划下一站、比较城市和判断旅居成本。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/nomadlist.com"
   },
   {
     "id": "workfrom",
@@ -925,7 +1231,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "nomad-life",
-    "tags": ["Cowork", "远程办公", "咖啡馆", "旅居"],
+    "tags": [
+      "Cowork",
+      "远程办公",
+      "咖啡馆",
+      "旅居"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "基础信息免费；高级功能可能付费",
@@ -933,7 +1244,8 @@
     "description": "Workfrom 适合查找适合工作的咖啡馆、共享办公空间和远程办公地点。对经常换城市工作的数字游民很实用。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/workfrom.co"
   },
   {
     "id": "airbnb",
@@ -943,7 +1255,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["住宿", "长住", "旅行", "数字游民"],
+    "tags": [
+      "住宿",
+      "长住",
+      "旅行",
+      "数字游民"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "按住宿订单收费",
@@ -951,7 +1268,8 @@
     "description": "Airbnb 适合寻找短租、长住和远程办公友好的住宿。对数字游民来说，稳定网络、厨房和长住折扣常常比酒店更重要。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/airbnb.com"
   },
   {
     "id": "upwork",
@@ -961,7 +1279,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["接单", "自由职业", "远程工作", "外包"],
+    "tags": [
+      "接单",
+      "自由职业",
+      "远程工作",
+      "外包"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "注册免费；平台按交易规则收费",
@@ -969,7 +1292,8 @@
     "description": "Upwork 适合自由职业者寻找开发、设计、写作、运营和咨询项目。对数字游民来说，它是建立远程收入来源的主流平台之一。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/upwork.com"
   },
   {
     "id": "fiverr",
@@ -979,7 +1303,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["接单", "零碎服务", "自由职业", "创意服务"],
+    "tags": [
+      "接单",
+      "零碎服务",
+      "自由职业",
+      "创意服务"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "注册免费；平台按交易规则收费",
@@ -987,7 +1316,8 @@
     "description": "Fiverr 适合销售设计、写作、翻译、剪辑、开发等标准化服务。自由职业者可以把服务包装成商品，降低客户沟通成本。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/fiverr.com"
   },
   {
     "id": "toptal",
@@ -997,7 +1327,12 @@
     "has_affiliate": true,
     "affiliate_rate": "首单高佣",
     "category": "nomad-life",
-    "tags": ["高端接单", "开发者", "设计师", "远程工作"],
+    "tags": [
+      "高端接单",
+      "开发者",
+      "设计师",
+      "远程工作"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "申请加入免费；平台按项目规则收费",
@@ -1005,7 +1340,8 @@
     "description": "Toptal 面向经验丰富的开发者、设计师和财务专家，项目客单价通常较高。适合希望进入更高端远程项目市场的人群。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/toptal.com"
   },
   {
     "id": "we-work-remotely",
@@ -1015,7 +1351,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["远程职位", "招聘", "开发", "运营"],
+    "tags": [
+      "远程职位",
+      "招聘",
+      "开发",
+      "运营"
+    ],
     "is_ai": false,
     "pricing_type": "free",
     "pricing_desc": "求职浏览免费",
@@ -1023,7 +1364,8 @@
     "description": "We Work Remotely 收录大量远程开发、设计、产品、运营和客服岗位。适合希望从自由职业转向稳定远程工作的用户。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/weworkremotely.com"
   },
   {
     "id": "flexjobs",
@@ -1033,7 +1375,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["远程职位", "审核制", "求职", "自由职业"],
+    "tags": [
+      "远程职位",
+      "审核制",
+      "求职",
+      "自由职业"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "求职者订阅制",
@@ -1041,7 +1388,8 @@
     "description": "FlexJobs 通过审核制筛选远程、灵活办公和自由职业机会，减少低质量职位。适合希望认真寻找长期远程工作的用户。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/flexjobs.com"
   },
   {
     "id": "99designs",
@@ -1051,7 +1399,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["设计接单", "Logo", "品牌", "自由职业"],
+    "tags": [
+      "设计接单",
+      "Logo",
+      "品牌",
+      "自由职业"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "接单和项目按平台规则收费",
@@ -1059,7 +1412,8 @@
     "description": "99designs 适合设计师寻找 Logo、品牌、包装、网页等项目。对视觉设计类自由职业者来说，它是一个面向国际客户的接单渠道。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/99designs.com"
   },
   {
     "id": "freelancer",
@@ -1069,7 +1423,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["接单", "自由职业", "外包", "远程"],
+    "tags": [
+      "接单",
+      "自由职业",
+      "外包",
+      "远程"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "注册免费；平台按项目规则收费",
@@ -1077,7 +1436,8 @@
     "description": "Freelancer 收录开发、设计、写作、数据、营销等多种项目。适合自由职业者拓宽客户来源，也适合新手了解国际项目需求。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/freelancer.com"
   },
   {
     "id": "airtable",
@@ -1087,7 +1447,12 @@
     "has_affiliate": true,
     "affiliate_rate": "高佣金",
     "category": "nomad-life",
-    "tags": ["数据库", "内容管理", "无代码", "运营"],
+    "tags": [
+      "数据库",
+      "内容管理",
+      "无代码",
+      "运营"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "免费版可用；高级功能和团队协作付费",
@@ -1095,7 +1460,8 @@
     "description": "Airtable 适合管理内容库、客户列表、工具清单、项目流程和运营数据。对数字游民和小团队来说，它是介于表格和数据库之间的灵活工具。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/airtable.com"
   },
   {
     "id": "gumroad",
@@ -1105,7 +1471,12 @@
     "has_affiliate": true,
     "affiliate_rate": "有 affiliate 计划",
     "category": "nomad-life",
-    "tags": ["数字产品", "销售", "创作者", "收款"],
+    "tags": [
+      "数字产品",
+      "销售",
+      "创作者",
+      "收款"
+    ],
     "is_ai": false,
     "pricing_type": "freemium",
     "pricing_desc": "开店免费；平台按交易收费",
@@ -1113,7 +1484,8 @@
     "description": "Gumroad 适合销售电子书、模板、课程、设计素材、软件和会员内容。对独立创作者来说，它是快速验证数字产品收入的轻量渠道。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/gumroad.com"
   },
   {
     "id": "indie-hackers",
@@ -1123,7 +1495,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "community",
-    "tags": ["独立开发", "社区", "MVP", "创业"],
+    "tags": [
+      "独立开发",
+      "社区",
+      "MVP",
+      "创业"
+    ],
     "is_ai": false,
     "pricing_type": "free",
     "pricing_desc": "免费访问",
@@ -1131,7 +1508,8 @@
     "description": "Indie Hackers 是独立开发者分享收入、产品、增长和创业经验的社区。MVP 上线后适合发帖获取反馈和第一批用户。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/indiehackers.com"
   },
   {
     "id": "product-hunt",
@@ -1141,7 +1519,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "community",
-    "tags": ["产品发布", "MVP", "曝光", "社区"],
+    "tags": [
+      "产品发布",
+      "MVP",
+      "曝光",
+      "社区"
+    ],
     "is_ai": false,
     "pricing_type": "free",
     "pricing_desc": "免费访问和发布",
@@ -1149,7 +1532,8 @@
     "description": "Product Hunt 是独立产品和新工具发布的重要渠道。MVP 上线后可在这里发布，获得早期用户、反馈和海外社区曝光。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/producthunt.com"
   },
   {
     "id": "hacker-news",
@@ -1159,7 +1543,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "community",
-    "tags": ["技术社区", "Show HN", "开发者", "曝光"],
+    "tags": [
+      "技术社区",
+      "Show HN",
+      "开发者",
+      "曝光"
+    ],
     "is_ai": false,
     "pricing_type": "free",
     "pricing_desc": "免费访问",
@@ -1167,7 +1556,8 @@
     "description": "Hacker News 是技术创业和开发者社区的重要入口。通过 Show HN 发布项目，有机会获得高质量技术用户和早期反馈。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/news.ycombinator.com"
   },
   {
     "id": "v2ex",
@@ -1177,7 +1567,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "community",
-    "tags": ["中文社区", "独立开发", "分享创造", "技术"],
+    "tags": [
+      "中文社区",
+      "独立开发",
+      "分享创造",
+      "技术"
+    ],
     "is_ai": false,
     "pricing_type": "free",
     "pricing_desc": "免费访问",
@@ -1185,7 +1580,8 @@
     "description": "v2ex 是中文技术和独立开发者常用社区，适合在分享创造等板块发布项目、收集反馈和获取早期中文用户。",
     "featured": false,
     "region": "cn",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/v2ex.com"
   },
   {
     "id": "jike",
@@ -1195,7 +1591,12 @@
     "has_affiliate": false,
     "affiliate_rate": null,
     "category": "community",
-    "tags": ["中文社区", "数字游民", "AI", "内容分发"],
+    "tags": [
+      "中文社区",
+      "数字游民",
+      "AI",
+      "内容分发"
+    ],
     "is_ai": false,
     "pricing_type": "free",
     "pricing_desc": "免费访问",
@@ -1203,7 +1604,8 @@
     "description": "即刻聚集了不少中文数字游民、AI 爱好者和独立开发者。适合做内容分发、项目预热和用户反馈收集。",
     "featured": false,
     "region": "cn",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/jike.city"
   },
   {
     "id": "shopify",
@@ -1213,7 +1615,12 @@
     "has_affiliate": true,
     "affiliate_rate": "$58–200/用户",
     "category": "community",
-    "tags": ["独立站", "电商", "Etsy", "高佣金"],
+    "tags": [
+      "独立站",
+      "电商",
+      "Etsy",
+      "高佣金"
+    ],
     "is_ai": false,
     "pricing_type": "paid",
     "pricing_desc": "按订阅套餐收费",
@@ -1221,6 +1628,7 @@
     "description": "Shopify 适合 Etsy 卖家和数字产品创作者从平台店铺升级到独立站。它提供电商建站、支付、主题、插件和订单管理能力。",
     "featured": false,
     "region": "global",
-    "last_verified": "2026-06-24"
+    "last_verified": "2026-06-24",
+    "logo_url": "https://logo.clearbit.com/shopify.com"
   }
 ]

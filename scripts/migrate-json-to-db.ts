@@ -29,6 +29,17 @@ function createDb() {
   return drizzle(client, { schema: require('../lib/schema/sqlite') })
 }
 
+function getLogoUrl(tool: any) {
+  if (tool.logo_url) return tool.logo_url
+
+  try {
+    const host = new URL(tool.url_official).hostname.replace(/^www\./, '')
+    return `https://logo.clearbit.com/${host}`
+  } catch {
+    return null
+  }
+}
+
 const db = createDb()
 
 async function run() {
@@ -78,7 +89,7 @@ async function run() {
         oneLinerEn: t.one_liner_en ?? null,
         description: t.description ?? null,
         descriptionEn: t.description_en ?? null,
-        logoUrl: t.logo_url ?? null,
+        logoUrl: getLogoUrl(t),
         featured: t.featured ?? false,
         region: t.region ?? 'global',
         status: 'published',

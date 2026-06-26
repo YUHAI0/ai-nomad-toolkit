@@ -75,6 +75,17 @@ function mapDefaultCategory(cat: (typeof defaultCategories)[number]): PublicCate
   }
 }
 
+function getDefaultLogoUrl(tool: DefaultTool) {
+  if (tool.logo_url) return tool.logo_url
+
+  try {
+    const host = new URL(tool.url_official).hostname.replace(/^www\./, '')
+    return `https://logo.clearbit.com/${host}`
+  } catch {
+    return null
+  }
+}
+
 function mapDefaultTool(tool: DefaultTool): PublicTool {
   return {
     id: tool.id,
@@ -92,7 +103,7 @@ function mapDefaultTool(tool: DefaultTool): PublicTool {
     oneLinerEn: tool.one_liner_en ?? null,
     description: tool.description ?? null,
     descriptionEn: tool.description_en ?? null,
-    logoUrl: tool.logo_url ?? null,
+    logoUrl: getDefaultLogoUrl(tool),
     featured: tool.featured ?? false,
     region: tool.region ?? 'global',
     status: tool.status ?? 'published',
