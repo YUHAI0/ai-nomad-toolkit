@@ -38,8 +38,8 @@ async function run() {
   const categoriesPath = path.join(process.cwd(), 'data', 'categories.json')
   if (fs.existsSync(categoriesPath)) {
     const categories = JSON.parse(fs.readFileSync(categoriesPath, 'utf-8'))
-    for (const cat of categories) {
-      await (db as any).insert(schema.categories).values({
+    if (categories.length > 0) {
+      await (db as any).insert(schema.categories).values(categories.map((cat: any) => ({
         id: cat.id,
         name: cat.name,
         nameEn: cat.name_en ?? null,
@@ -50,7 +50,7 @@ async function run() {
         isAi: cat.is_ai_section ?? true,
         priority: cat.priority ?? 0,
         createdAt: new Date(),
-      }).onConflictDoNothing()
+      }))).onConflictDoNothing()
     }
     console.log(`[Migrate] Imported ${categories.length} categories`)
   } else {
@@ -61,8 +61,8 @@ async function run() {
   const toolsPath = path.join(process.cwd(), 'data', 'tools.json')
   if (fs.existsSync(toolsPath)) {
     const tools = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'))
-    for (const t of tools) {
-      await (db as any).insert(schema.tools).values({
+    if (tools.length > 0) {
+      await (db as any).insert(schema.tools).values(tools.map((t: any) => ({
         id: t.id ?? nanoid(10),
         name: t.name,
         urlOfficial: t.url_official,
@@ -86,7 +86,7 @@ async function run() {
         lastVerified: t.last_verified ?? null,
         createdAt: new Date(),
         updatedAt: new Date(),
-      }).onConflictDoNothing()
+      }))).onConflictDoNothing()
     }
     console.log(`[Migrate] Imported ${tools.length} tools`)
   } else {
