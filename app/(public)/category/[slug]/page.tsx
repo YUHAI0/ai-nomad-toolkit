@@ -69,7 +69,6 @@ export default async function CategoryPage({
   )
 
   const tools = allTools.filter((t: any) => {
-    if (filter === 'affiliate') return t.hasAffiliate
     if (filter === 'free') return t.pricingType === 'free'
     if (filter === 'paid') return t.pricingType === 'paid' || t.pricingType === 'freemium'
     return true
@@ -77,7 +76,6 @@ export default async function CategoryPage({
 
   const filterTabs = [
     { key: '', label: '全部' },
-    { key: 'affiliate', label: '有 Affiliate' },
     { key: 'free', label: '免费' },
     { key: 'paid', label: '付费/Freemium' },
   ]

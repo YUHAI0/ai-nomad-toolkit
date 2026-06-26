@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div>
           <p className="text-white font-bold text-sm">AI Nomad Toolkit</p>
-          <p className="text-xs mt-1">数字游民赚钱路径地图 · 部分链接含 Affiliate 佣金</p>
+          <p className="text-xs mt-1">数字游民赚钱路径地图 · 精选工具资源库</p>
         </div>
         <nav className="flex gap-6 text-xs">
           <Link href="/about" className="hover:text-white">关于本站</Link>

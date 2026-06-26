@@ -15,10 +15,9 @@ interface ToolCardProps {
     isAi?: boolean | null
   }
   categoryName?: string
-  showAffiliateBadge?: boolean
 }
 
-export function ToolCard({ tool, categoryName, showAffiliateBadge = true }: ToolCardProps) {
+export function ToolCard({ tool, categoryName }: ToolCardProps) {
   const href = tool.isAi !== false ? `/tool/${tool.id}` : `/site/${tool.id}`
   const visitUrl = tool.urlAffiliate || tool.urlOfficial
 
@@ -32,11 +31,6 @@ export function ToolCard({ tool, categoryName, showAffiliateBadge = true }: Tool
             <span className="text-xl">{tool.name[0]}</span>
           )}
         </div>
-        {showAffiliateBadge && tool.hasAffiliate && (
-          <span className="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">
-            含联盟链接
-          </span>
-        )}
       </div>
       <div className="flex-1">
         <Link href={href} className="font-bold text-slate-900 hover:text-green-600 text-sm">{tool.name}</Link>

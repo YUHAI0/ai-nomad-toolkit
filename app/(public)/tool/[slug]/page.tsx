@@ -3,7 +3,6 @@ import { db } from '@/lib/db'
 import { eq, and, ne } from 'drizzle-orm'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AffiliateDisclosure } from '@/components/affiliate-disclosure'
 import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
 import {
@@ -139,8 +138,6 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
           <p className="text-slate-600 leading-relaxed whitespace-pre-wrap">{tool.description}</p>
         </div>
       )}
-
-      {tool.hasAffiliate && <AffiliateDisclosure />}
 
       {related.length > 0 && (
         <div className="mt-10">

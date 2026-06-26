@@ -1,8 +1,13 @@
 import { db } from '@/lib/db'
-import { like, or, eq, and } from 'drizzle-orm'
+import { eq } from 'drizzle-orm'
 import { ToolCard } from '@/components/tool-card'
 import type { Metadata } from 'next'
-import { searchFallbackTools, withDbTimeout } from '@/lib/public-data'
+import {
+  getSearchKeywords,
+  matchesToolSearch,
+  searchFallbackTools,
+  withDbTimeout,
+} from '@/lib/public-data'
 
 export const metadata: Metadata = { title: '搜索工具 | AI Nomad Toolkit' }
 export const dynamic = 'force-dynamic'
@@ -22,21 +27,18 @@ export default async function SearchPage({
   const q = rawQ?.trim() ?? ''
   const schema = getSchema()
 
-  const tools = q
+  const keywords = getSearchKeywords(q)
+
+  const allTools = keywords.length > 0
     ? await withDbTimeout(
-        (db as any).select().from(schema.tools).where(
-          and(
-            eq(schema.tools.status, 'published'),
-            or(
-              like(schema.tools.name, `%${q}%`),
-              like(schema.tools.oneLiner, `%${q}%`),
-              like(schema.tools.description, `%${q}%`),
-            )
-          )
-        ),
+        (db as any).select().from(schema.tools).where(eq(schema.tools.status, 'published')),
         searchFallbackTools(q),
         `search ${q}`,
       )
+    : []
+
+  const tools = keywords.length > 0
+    ? (allTools as any[]).filter(tool => matchesToolSearch(tool, keywords))
     : []
 
   return (

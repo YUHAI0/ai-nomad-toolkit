@@ -58,6 +58,7 @@ type DefaultTool = {
   logo_url?: string | null
   featured?: boolean | null
   region?: string | null
+  status?: 'draft' | 'published' | string | null
   last_verified?: string | null
 }
 
@@ -94,7 +95,7 @@ function mapDefaultTool(tool: DefaultTool): PublicTool {
     logoUrl: tool.logo_url ?? null,
     featured: tool.featured ?? false,
     region: tool.region ?? 'global',
-    status: 'published',
+    status: tool.status ?? 'published',
     sortOrder: 0,
     lastVerified: tool.last_verified ?? null,
   }
@@ -107,35 +108,63 @@ export const fallbackCategories = defaultCategories
 
 export const fallbackTools = (defaultTools as DefaultTool[]).map(mapDefaultTool)
 
+export const fallbackPublishedTools = fallbackTools.filter(tool => tool.status === 'published')
+
+export function getFallbackHomeData() {
+  return {
+    categories: fallbackCategories,
+    tools: fallbackPublishedTools.slice().sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0)),
+  }
+}
+
+export function getSearchKeywords(query: string) {
+  return query
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean)
+}
+
+export function matchesToolSearch(tool: Pick<PublicTool, 'name' | 'oneLiner' | 'description' | 'tags'>, keywords: string[]) {
+  if (keywords.length === 0) return false
+
+  const searchable = [
+    tool.name,
+    tool.oneLiner,
+    tool.description,
+    ...(tool.tags ?? []),
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase()
+
+  return keywords.every(keyword => searchable.includes(keyword))
+}
+
 export function getFallbackCategory(id: string) {
   return fallbackCategories.find(category => category.id === id) ?? null
 }
 
 export function getFallbackTool(id: string) {
-  return fallbackTools.find(tool => tool.id === id) ?? null
+  return fallbackPublishedTools.find(tool => tool.id === id) ?? null
 }
 
 export function getFallbackToolsByCategory(categoryId: string) {
-  return fallbackTools.filter(tool => tool.categoryId === categoryId)
+  return fallbackPublishedTools.filter(tool => tool.categoryId === categoryId)
 }
 
 export function getFallbackRelatedTools(tool: PublicTool, limit = 4) {
   if (!tool.categoryId) return []
-  return fallbackTools
+  return fallbackPublishedTools
     .filter(item => item.categoryId === tool.categoryId && item.id !== tool.id)
     .slice(0, limit)
 }
 
 export function searchFallbackTools(query: string) {
-  const keyword = query.toLowerCase()
-  if (!keyword) return []
+  const keywords = getSearchKeywords(query)
+  if (keywords.length === 0) return []
 
-  return fallbackTools.filter(tool => {
-    const tags = tool.tags?.join(' ') ?? ''
-    return [tool.name, tool.oneLiner, tool.description, tags]
-      .filter(Boolean)
-      .some(value => value!.toLowerCase().includes(keyword))
-  })
+  return fallbackPublishedTools.filter(tool => matchesToolSearch(tool, keywords))
 }
 
 export async function withDbTimeout<T>(
